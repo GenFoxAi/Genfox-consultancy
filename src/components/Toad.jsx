@@ -24,12 +24,17 @@ export default function Toad() {
   const createAnimation = () => {
     gsap.set(refs.current, { opacity: 0.2 });
 
+    const getEndValue = () => {
+      const vh = window.innerHeight;
+      return window.innerWidth <= 768 ? `+=${vh * 2}` : `+=${vh * 3}`;
+    };
+
     gsap.to(refs.current, {
       scrollTrigger: {
         trigger: container.current,
         scrub: true,
-        start: 'top 80%',  // Start when top of container is at 80% of viewport height
-        end: 'top 20%',    // End when top of container reaches 20% of viewport height
+        start: 'top 80%',
+        end: getEndValue(),
       },
       opacity: 1,
       ease: 'none',
@@ -68,8 +73,7 @@ export default function Toad() {
       <div ref={body} className={styles.body}>
         {splitWords(phrase)}
       </div>
-      {/* Uncomment this section if you want to include the SVG content */}
-      {/* <div className="flex flex-col gap-y-4">
+      {/* <div className="flex flex-col gap-y-4 ">
         <p className="text-white/50">Trusted by high-performing companies</p>
         <div className="flex gap-5 gap-x-10 flex-wrap">
           {svgs.map((svg) => (
