@@ -7,7 +7,7 @@ const SwipeCarousel = () => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const totalSlides = 2;
+  const totalSlides = 3;
 
   const slideData = [
     {
@@ -35,8 +35,21 @@ const SwipeCarousel = () => {
       summary:
         'The deployment of the Kinder Bench Parent Portal revolutionized the relationship between the kindergarten and its parent community. By centralizing communication and leveraging AI for personalized insights, the portal reduced staff workload related to parent inquiries by approximately 40%, freeing them to focus on teaching and caregiving. Parents gained unprecedented visibility into their child’s kindergarten experience, fostering trust and engagement. The system’s ability to deliver instant updates and multimedia content strengthened community ties, while its scalability ensured it could grow with the organization. Ultimately, this solution bridged the gap between home and school, creating a more connected and informed ecosystem.',
       image: '/test2.png',
-      video: '', // No video for the second slide
+      video: '',
       alt: 'commit',
+    },
+    {
+      projectName: 'Kinder Bench Parent Portal',
+      usecase: 'Enhancing Parent Engagement with a Digital Interface',
+      problem:
+        'Kindergarten staff struggled to keep parents consistently informed about their children’s progress, daily activities, and important announcements. Traditional methods like paper notes, sporadic emails, and phone calls were time-consuming and often ineffective, leading to miscommunication and frustration. Parents frequently felt disconnected from their child’s day-to-day experience, and staff wasted valuable time addressing individual inquiries that could have been preemptively resolved with better tools. This lack of a centralized communication hub also made it difficult to share multimedia updates or emergency alerts efficiently.',
+      solution:
+        'The Kinder Bench Parent Portal is a custom-built digital platform powered by AI and cloud technology. It provides parents with a user-friendly interface accessible via web and mobile devices, offering real-time access to their child’s attendance records, meal logs, activity schedules, and developmental milestones. The portal uses AI to generate personalized progress reports and predictive insights based on child data, helping parents stay informed and engaged. Automated notifications alert parents to upcoming events, payment deadlines, or urgent updates, while a secure messaging feature allows direct communication with staff. The system also supports multimedia uploads, enabling teachers to share photos and videos of classroom moments instantly.',
+      summary:
+        'The deployment of the Kinder Bench Parent Portal revolutionized the relationship between the kindergarten and its parent community. By centralizing communication and leveraging AI for personalized insights, the portal reduced staff workload related to parent inquiries by approximately 40%, freeing them to focus on teaching and caregiving. Parents gained unprecedented visibility into their child’s kindergarten experience, fostering trust and engagement. The system’s ability to deliver instant updates and multimedia content strengthened community ties, while its scalability ensured it could grow with the organization. Ultimately, this solution bridged the gap between home and school, creating a more connected and informed ecosystem.',
+      image: '/Frame 2.png',
+      video: '',
+      alt: 'whatapp',
     },
   ];
 
@@ -112,99 +125,55 @@ const SwipeCarousel = () => {
       <div className='w-full max-w-6xl overflow-hidden'>
         <div className='relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px]'>
           <AnimatePresence initial={false} custom={direction}>
-            {currentIndex === 0 && (
-              <motion.div
-                key='slide1'
-                custom={direction}
-                variants={slideVariants}
-                initial='enter'
-                animate='center'
-                exit='exit'
-                transition={{
-                  x: { type: 'spring', stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                drag='x'
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.2}
-                onDragEnd={handleDragEnd}
-                className='absolute w-full h-full cursor-grab active:cursor-grabbing select-none'
+            <motion.div
+              key={`slide${currentIndex}`}
+              custom={direction}
+              variants={slideVariants}
+              initial='enter'
+              animate='center'
+              exit='exit'
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={handleDragEnd}
+              className='absolute w-full h-full cursor-grab active:cursor-grabbing select-none'
+            >
+              <img
+                src={currentSlide.image}
+                alt={currentSlide.alt}
+                className='w-[90%] sm:w-[85%] md:w-full h-full object-contain rounded-3xl bg-white mx-auto pointer-events-none'
+              />
+              <button
+                onClick={() => setIsPopupOpen(true)}
+                className='absolute top-4 right-4 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
+                aria-label='Show slide details'
               >
-                <img
-                  src={currentSlide.image}
-                  alt={currentSlide.alt}
-                  className='w-[90%] sm:w-[85%] md:w-full h-full object-contain rounded-3xl bg-white mx-auto pointer-events-none'
-                />
-                <button
-                  onClick={() => setIsPopupOpen(true)}
-                  className='absolute top-4 right-4 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
-                  aria-label='Show slide details'
-                >
-                  <span className='text-xl font-bold cursor-pointer hover:text-blue-500'>
-                    <AiOutlineInfoCircle />
-                  </span>
-                </button>
-              </motion.div>
-            )}
-            {currentIndex === 1 && (
-              <motion.div
-                key='slide2'
-                custom={direction}
-                variants={slideVariants}
-                initial='enter'
-                animate='center'
-                exit='exit'
-                transition={{
-                  x: { type: 'spring', stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                drag='x'
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.2}
-                onDragEnd={handleDragEnd}
-                className='absolute w-full h-full cursor-grab active:cursor-grabbing select-none'
-              >
-                <img
-                  src={currentSlide.image}
-                  alt={currentSlide.alt}
-                  className='w-[90%] sm:w-[85%] md:w-full h-full object-contain rounded-3xl bg-white mx-auto pointer-events-none'
-                />
-                <button
-                  onClick={() => setIsPopupOpen(true)}
-                  className='absolute top-4 right-4 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
-                  aria-label='Show slide details'
-                >
-                  <span className='text-xl font-bold cursor-pointer hover:text-blue-500'>
-                    <AiOutlineInfoCircle />
-                  </span>
-                </button>
-              </motion.div>
-            )}
+                <span className='text-xl font-bold cursor-pointer hover:text-blue-500'>
+                  <AiOutlineInfoCircle />
+                </span>
+              </button>
+            </motion.div>
           </AnimatePresence>
         </div>
         <div className='flex justify-center mt-4 space-x-2'>
-          <button
-            onClick={() => {
-              const direction = 0 > currentIndex ? 1 : -1;
-              setCurrentIndex(0);
-              setPage([0, direction]);
-            }}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${
-              currentIndex === 0 ? 'bg-gray-500' : 'bg-gray-300'
-            }`}
-            aria-label='Go to slide 1'
-          />
-          <button
-            onClick={() => {
-              const direction = 1 > currentIndex ? 1 : -1;
-              setCurrentIndex(1);
-              setPage([1, direction]);
-            }}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${
-              currentIndex === 1 ? 'bg-gray-500' : 'bg-gray-300'
-            }`}
-            aria-label='Go to slide 2'
-          />
+          {Array.from({ length: totalSlides }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                const direction = index > currentIndex ? 1 : -1;
+                setCurrentIndex(index);
+                setPage([index, direction]);
+              }}
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${
+                currentIndex === index ? 'bg-gray-500' : 'bg-gray-300'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
       <AnimatePresence>
@@ -231,7 +200,6 @@ const SwipeCarousel = () => {
                 </button>
               </div>
               <div className='flex flex-col sm:flex-row gap-6 sm:gap-8'>
-                {/* Left Side - Enhanced Content */}
                 <div className='w-full sm:w-[40%]'>
                   <h3 className='text-xl sm:text-2xl font-semibold text-white'>
                     {currentSlide.projectName}
@@ -243,7 +211,6 @@ const SwipeCarousel = () => {
                   )}
                   <div className='w-full border-t border-gray-600 my-4'></div>
 
-                  {/* Stats Section */}
                   <div className='text-base sm:text-lg text-white/80 space-y-3'>
                     <p>
                       <span className='font-semibold text-white'>
@@ -279,19 +246,17 @@ const SwipeCarousel = () => {
                     </p>
                   </div>
 
-                  {/* Key Features Section */}
                   <div className='w-full border-t border-gray-600 my-4'></div>
                   <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
                     Key Features
                   </h4>
-                  <ul className='text-base  sm:text-lg text-white/80 space-y-2 list-disc pl-5'>
+                  <ul className='text-base sm:text-lg text-white/80 space-y-2 list-disc pl-5'>
                     <li>Real-time Attendance Tracking</li>
                     <li>AI-Powered Meal Planning</li>
                     <li>Integrated Chat System</li>
                     <li>24/7 Live Support</li>
                   </ul>
 
-                  {/* Team Section */}
                   <div className='w-full border-t border-gray-600 my-4'></div>
                   <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
                     Team
@@ -317,7 +282,6 @@ const SwipeCarousel = () => {
                     </p>
                   </div>
 
-                  {/* Milestones Section */}
                   <div className='w-full border-t border-gray-600 my-4'></div>
                   <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
                     Milestones
@@ -329,7 +293,6 @@ const SwipeCarousel = () => {
                   </div>
                 </div>
 
-                {/* Right Side - Problem, Solution, Summary */}
                 <div className='w-full sm:w-[60%]'>
                   <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
                     Problem
@@ -356,7 +319,6 @@ const SwipeCarousel = () => {
                 </div>
               </div>
 
-              {/* Assets Section */}
               <div className='w-full mt-6'>
                 <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
                   Assets
