@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { AiOutlineInfoCircle } from 'react-icons/ai';
 
 const SwipeCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -8,7 +9,6 @@ const SwipeCarousel = () => {
 
   const totalSlides = 2;
 
-  // Slide data (based on your image for Kinder Bench)
   const slideData = [
     {
       title: 'Kinder Bench',
@@ -22,8 +22,8 @@ const SwipeCarousel = () => {
       alt: 'donna',
     },
     {
-      title: 'Another Case Study', // Placeholder for the second slide
-      savings: '~35%', // Example value, replace with actual data
+      title: 'Another Case Study',
+      savings: '~35%',
       description: 'Innovative solutions for another client project.',
       problem:
         'Challenges in managing operational tasks led to inefficiencies.',
@@ -32,14 +32,12 @@ const SwipeCarousel = () => {
     },
   ];
 
-  // Handle slide navigation
   const paginate = (newDirection) => {
     const newIndex = (currentIndex + newDirection + totalSlides) % totalSlides;
     setCurrentIndex(newIndex);
     setPage([newIndex, newDirection]);
   };
 
-  // Auto-play functionality with pause when popup is open
   useEffect(() => {
     let autoPlayInterval;
     if (!isPopupOpen) {
@@ -47,25 +45,20 @@ const SwipeCarousel = () => {
         paginate(1);
       }, 8000);
     }
-
     return () => clearInterval(autoPlayInterval);
   }, [currentIndex, isPopupOpen]);
 
-  // Prevent background scrolling when popup is open
   useEffect(() => {
     if (isPopupOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
-
-    // Cleanup to restore default scrolling when component unmounts or popup closes
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, [isPopupOpen]);
 
-  // Animation variants
   const slideVariants = {
     enter: (direction) => ({
       x: direction > 0 ? '100%' : '-100%',
@@ -81,17 +74,14 @@ const SwipeCarousel = () => {
     }),
   };
 
-  // Popup animation variants
   const popupVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 },
     exit: { opacity: 0, scale: 0.8 },
   };
 
-  // Swipe threshold
   const swipeThreshold = 50;
 
-  // Handle drag end
   const handleDragEnd = (e, { offset }) => {
     const swipeDistance = offset.x;
     if (Math.abs(swipeDistance) > swipeThreshold) {
@@ -99,12 +89,10 @@ const SwipeCarousel = () => {
     }
   };
 
-  // Current slide data
   const currentSlide = slideData[currentIndex];
 
   return (
     <div className='flex flex-col items-center justify-center my-8 px-4 sm:px-8 md:px-[10%] lg:px-[16%] gap-5 relative'>
-      {/* Header */}
       <div className='mb-8 text-center'>
         <h2 className='text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight'>
           Case Study
@@ -113,8 +101,6 @@ const SwipeCarousel = () => {
           AI-driven solutions powering automation, analytics, and innovation.
         </p>
       </div>
-
-      {/* Carousel Container */}
       <div className='w-full max-w-6xl overflow-hidden'>
         <div className='relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px]'>
           <AnimatePresence initial={false} custom={direction}>
@@ -141,17 +127,15 @@ const SwipeCarousel = () => {
                   alt={currentSlide.alt}
                   className='w-[90%] sm:w-[85%] md:w-full h-full object-contain rounded-3xl bg-white mx-auto pointer-events-none'
                 />
-                {/* Info Button */}
                 <button
                   onClick={() => setIsPopupOpen(true)}
                   className='absolute top-4 right-4 bg-white/80 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
                   aria-label='Show slide details'
                 >
-                  <span className='text-xl font-bold'>i</span>
+                  <span className='text-xl font-bold cursor-pointer hover:text-blue-500'><AiOutlineInfoCircle /></span>
                 </button>
               </motion.div>
             )}
-
             {currentIndex === 1 && (
               <motion.div
                 key='slide2'
@@ -175,20 +159,17 @@ const SwipeCarousel = () => {
                   alt={currentSlide.alt}
                   className='w-[90%] sm:w-[85%] md:w-full h-full object-contain rounded-3xl bg-white mx-auto pointer-events-none'
                 />
-                {/* Info Button */}
                 <button
                   onClick={() => setIsPopupOpen(true)}
                   className='absolute top-4 right-4 bg-white/80 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
                   aria-label='Show slide details'
                 >
-                  <span className='text-xl font-bold'>i</span>
+                  <span className='text-xl font-bold cursor-pointer hover:text-blue-500'><AiOutlineInfoCircle /></span>
                 </button>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
-
-        {/* Navigation Dots */}
         <div className='flex justify-center mt-4 space-x-2'>
           <button
             onClick={() => {
@@ -214,8 +195,6 @@ const SwipeCarousel = () => {
           />
         </div>
       </div>
-
-      {/* Popup for Slide Details */}
       <AnimatePresence>
         {isPopupOpen && (
           <motion.div
@@ -231,7 +210,6 @@ const SwipeCarousel = () => {
             }}
           >
             <motion.div className='p-6 rounded-lg shadow-lg max-w-3xl w-full mx-4 relative flex flex-col text-white'>
-              {/* Close Button (X) centered at the top */}
               <div className='w-full flex justify-center'>
                 <button
                   onClick={() => setIsPopupOpen(false)}
@@ -240,8 +218,6 @@ const SwipeCarousel = () => {
                   ×
                 </button>
               </div>
-
-              {/* Text Content */}
               <div className='flex gap-5'>
                 <div className=' w-[40%]'>
                   <h3 className='text-2xl font-medium '>
@@ -266,7 +242,6 @@ const SwipeCarousel = () => {
                   <p className='text-lg text-white/50'>
                     {currentSlide.problem}
                   </p>
-                  {/* Image Section below the text */}
                   <div className='w-full flex justify-center mt-6'>
                     <img
                       src='https://images.unsplash.com/photo-1621354598022-16599af1b8b2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
