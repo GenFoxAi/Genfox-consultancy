@@ -282,7 +282,7 @@ const Services = () => {
 
       <div className="max-w-5xl mx-auto relative z-10">
         <h2 className="text-3xl font-semibold mb-10 text-left ml-6">
-          We are suitable
+          We are suitable for
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((card, index) => (

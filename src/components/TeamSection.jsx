@@ -10,8 +10,7 @@ const TeamSection = () => {
         <div className='mb-12'>
           <h2 className='text-3xl font-semibold tracking-tight'>Team</h2>
           <p className='text-md sm:text-xl mt-4 max-w-md leading-7 font-light text-white/80'>
-            Each member of our team has a strong tech knowledge, with our
-            principal focus on the triumph of our customers' businesses
+          AI innovators dedicated to automation, optimization, and enterprise success at Genfox AI.
           </p>
         </div>
 

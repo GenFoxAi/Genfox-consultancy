@@ -55,7 +55,7 @@ export default function Navbar() {
         {/* Desktop Navigation Links */}
         <div className="hidden lg:flex items-center space-x-6 bg-[#343736]/64 backdrop-blur-md rounded-full p-1">
           <Link
-            to="services"
+            to="scroll-section"
             smooth={true}
             duration={500}
             className="text-white hover:text-gray-300 font-semibold py-3 ml-4 px-3 rounded-full transition-colors cursor-pointer"
@@ -150,7 +150,7 @@ export default function Navbar() {
             {/* Sidebar Links */}
             <div className="flex flex-col space-y-6 mt-8">
               <Link
-                to="services"
+                to="scroll-section"
                 smooth={true}
                 duration={800}
                 className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors cursor-pointer"

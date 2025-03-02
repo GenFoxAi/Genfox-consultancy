@@ -15,7 +15,7 @@ const SwipeCarousel = () => {
       savings: '~48%',
       subheading: 'ai automation of sub heading idk',
       description:
-        "AI automation of childcare for a kindergarten. We invest a lot of effort in our clients' projects because we want them to succeed.",
+        "AI automation of childcare for a kindergarten. We invest a lot of effort in our clients' projects because we want them to succeed. These repetitive tasks required significant staff involvement, leading to a drain on time and resources that could be better spent on direct child engagement. These repetitive tasks required significant staff involvement, leading to a drain on time and resources that could be better spent on direct child engagement.",
       problem:
         'The company faced inefficiencies in managing daily tasks such as child attendance tracking, meal planning, and parent communication. These repetitive tasks required significant staff involvement, leading to a drain on time and resources that could be better spent on direct child engagement.',
       image: '/test1.png',
@@ -24,12 +24,13 @@ const SwipeCarousel = () => {
       alt: 'donna',
     },
     {
-      title: 'Another Case Study',
+      title: 'Kinder Bench',
+      savings: '~48%',
       subheading: 'ai automation of sub heading idk',
-      savings: '~35%',
-      description: 'Innovative solutions for another client project.',
+      description:
+        "AI automation of childcare for a kindergarten. We invest a lot of effort in our clients' projects because we want them to succeed. These repetitive tasks required significant staff involvement, leading to a drain on time and resources that could be better spent on direct child engagement. These repetitive tasks required significant staff involvement, leading to a drain on time and resources that could be better spent on direct child engagement.",
       problem:
-        'Challenges in managing operational tasks led to inefficiencies.',
+        'The company faced inefficiencies in managing daily tasks such as child attendance tracking, meal planning, and parent communication. These repetitive tasks required significant staff involvement, leading to a drain on time and resources that could be better spent on direct child engagement.',
       image: '/test2.png',
       video: '', // No video for the second slide
       alt: 'commit',
@@ -267,12 +268,13 @@ const SwipeCarousel = () => {
                   alt={currentSlide.alt}
                   className='w-full h-auto rounded-lg object-contain'
                 />
-                {currentIndex === 0 && currentSlide.video && (
+             
                   <>
                     <div className='w-full border-t border-gray-300 my-3 sm:my-4'></div>
                     <h4 className='text-base self-start sm:text-lg mb-1 sm:mb-2 text-white'>
                       Video
                     </h4>
+                    <iframe src="https://drive.google.com/file/d/1YgNaBuxjtE8I1LNuIXahidIeSGKb1WbS/preview" width="640" height="480" allow="autoplay"></iframe>
                     <iframe
                       src='https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/preview'
                       width='100%'
@@ -281,7 +283,7 @@ const SwipeCarousel = () => {
                       className='w-full rounded-lg'
                     ></iframe>
                   </>
-                )}
+             
               </div>
             </motion.div>
           </motion.div>
