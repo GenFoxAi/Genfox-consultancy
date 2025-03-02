@@ -97,8 +97,8 @@ const SwipeCarousel = () => {
 
   return (
     <div className='flex flex-col items-center justify-center my-8 px-4 sm:px-8 md:px-[10%] lg:px-[16%] gap-5 relative'>
-      <div className='mb-8 text-center'>
-        <h2 className='text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight'>
+      <div className='mb-8 w-full'>
+        <h2 className=' text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight'>
           Case Study
         </h2>
         <p className='text-sm sm:text-md md:text-xl mt-4 max-w-md leading-6 font-light text-white/80'>
