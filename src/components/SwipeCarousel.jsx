@@ -4,9 +4,33 @@ import { motion, AnimatePresence } from 'framer-motion';
 const SwipeCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [[page, direction], setPage] = useState([0, 0]);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  // Total number of slides (hardcoded as 2 for now)
   const totalSlides = 2;
+
+  // Slide data (based on your image for Kinder Bench)
+  const slideData = [
+    {
+      title: 'Kinder Bench',
+      savings: '~48%',
+      subheading: 'ai automation of sub heading idk',
+      description:
+        "AI automation of childcare for a kindergarten. We invest a lot of effort in our clients' projects because we want them to succeed.",
+      problem:
+        'The company faced inefficiencies in managing daily tasks such as child attendance tracking, meal planning, and parent communication. These repetitive tasks required significant staff involvement, leading to a drain on time and resources that could be better spent on direct child engagement.',
+      image: '/test1.png',
+      alt: 'donna',
+    },
+    {
+      title: 'Another Case Study', // Placeholder for the second slide
+      savings: '~35%', // Example value, replace with actual data
+      description: 'Innovative solutions for another client project.',
+      problem:
+        'Challenges in managing operational tasks led to inefficiencies.',
+      image: '/test2.png',
+      alt: 'commit',
+    },
+  ];
 
   // Handle slide navigation
   const paginate = (newDirection) => {
@@ -15,16 +39,33 @@ const SwipeCarousel = () => {
     setPage([newIndex, newDirection]);
   };
 
-  // Auto-play functionality
+  // Auto-play functionality with pause when popup is open
   useEffect(() => {
-    const autoPlayInterval = setInterval(() => {
-      paginate(1); // Move to the next slide
-    }, 333000); // Change slide every 3 seconds
+    let autoPlayInterval;
+    if (!isPopupOpen) {
+      autoPlayInterval = setInterval(() => {
+        paginate(1);
+      }, 8000);
+    }
 
     return () => clearInterval(autoPlayInterval);
-  }, [currentIndex]);
+  }, [currentIndex, isPopupOpen]);
 
-  // Variants for slide animation
+  // Prevent background scrolling when popup is open
+  useEffect(() => {
+    if (isPopupOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cleanup to restore default scrolling when component unmounts or popup closes
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isPopupOpen]);
+
+  // Animation variants
   const slideVariants = {
     enter: (direction) => ({
       x: direction > 0 ? '100%' : '-100%',
@@ -40,32 +81,42 @@ const SwipeCarousel = () => {
     }),
   };
 
-  // Swipe threshold (minimum drag distance to trigger slide change)
-  const swipeThreshold = 100; // Pixels
+  // Popup animation variants
+  const popupVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 0.8 },
+  };
 
-  // Handle drag end to determine slide change
+  // Swipe threshold
+  const swipeThreshold = 50;
+
+  // Handle drag end
   const handleDragEnd = (e, { offset }) => {
     const swipeDistance = offset.x;
     if (Math.abs(swipeDistance) > swipeThreshold) {
-      if (swipeDistance < 0) {
-        paginate(1); // Dragged left -> next slide
-      } else {
-        paginate(-1); // Dragged right -> previous slide
-      }
+      paginate(swipeDistance < 0 ? 1 : -1);
     }
   };
 
+  // Current slide data
+  const currentSlide = slideData[currentIndex];
+
   return (
-    <div className='flex flex-col px-[16%] justify-center my-[5%] gap-5'>
-      <div className='mb-12'>
-        <h2 className='text-3xl font-semibold tracking-tight'>Case Study</h2>
-        <p className='text-md sm:text-xl mt-4 max-w-md leading-7 font-light text-white/80'>
+    <div className='flex flex-col items-center justify-center my-8 px-4 sm:px-8 md:px-[10%] lg:px-[16%] gap-5 relative'>
+      {/* Header */}
+      <div className='mb-8 text-center'>
+        <h2 className='text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight'>
+          Case Study
+        </h2>
+        <p className='text-sm sm:text-md md:text-xl mt-4 max-w-md leading-6 font-light text-white/80'>
           AI-driven solutions powering automation, analytics, and innovation.
         </p>
       </div>
+
+      {/* Carousel Container */}
       <div className='w-full max-w-6xl overflow-hidden'>
-        {/* Carousel Container */}
-        <div className='relative h-[500px]'>
+        <div className='relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px]'>
           <AnimatePresence initial={false} custom={direction}>
             {currentIndex === 0 && (
               <motion.div
@@ -83,11 +134,21 @@ const SwipeCarousel = () => {
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={0.2}
                 onDragEnd={handleDragEnd}
-                className='absolute w-full h-full cursor-grab active:cursor-grabbing'
+                className='absolute w-full h-full cursor-grab active:cursor-grabbing select-none'
               >
-                <div className='relative bg-white rounded-4xl py-5 h-[500px]'>
-                 <img src="/test.png" alt="" />
-                </div>
+                <img
+                  src={currentSlide.image}
+                  alt={currentSlide.alt}
+                  className='w-[90%] sm:w-[85%] md:w-full h-full object-contain rounded-3xl bg-white mx-auto pointer-events-none'
+                />
+                {/* Info Button */}
+                <button
+                  onClick={() => setIsPopupOpen(true)}
+                  className='absolute top-4 right-4 bg-white/80 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
+                  aria-label='Show slide details'
+                >
+                  <span className='text-xl font-bold'>i</span>
+                </button>
               </motion.div>
             )}
 
@@ -107,59 +168,27 @@ const SwipeCarousel = () => {
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={0.2}
                 onDragEnd={handleDragEnd}
-                className='absolute w-full h-full cursor-grab active:cursor-grabbing'
+                className='absolute w-full h-full cursor-grab active:cursor-grabbing select-none'
               >
-                <div className='relative bg-white rounded-4xl py-5 shadow-lg h-[500px]'>
-                  <div className='flex flex-col md:flex-row'>
-                    <div className='w-full p-4'>
-                      <img
-                        src='Usecase 2.jpg'
-                        alt='John Doe'
-                        className='w-full h-full rounded-lg object-cover'
-                      />
-                    </div>
-                    <div className='w-full md:w-1/2 p-4 flex flex-col justify-center'>
-                      <div className='bg-gray-200 p-4 rounded-lg mb-4 max-w-[250px] self-start'>
-                        <p className='text-gray-800 text-sm'>
-                          Hey, how many leave days do I have left this month?
-                        </p>
-                        <p className='text-sm text-gray-600 mt-2'>John Seb</p>
-                      </div>
-
-                      <div className='bg-blue-100 p-4 rounded-lg mb-4 max-w-[270px] self-end'>
-                        <p className='text-blue-800 text-sm'>
-                          You have a quota of 1 leave day remaining this month,
-                          as you already took one last week.😊
-                        </p>
-                        <p className='text-sm text-blue-600 mt-2 text-right'>
-                          Commit
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='absolute bottom-4 left-4 flex items-center space-x-2'>
-                    <img
-                      src='genfox.png'
-                      alt='Automated'
-                      className='w-10 h-10 rounded-full object-cover'
-                    />
-                    <div>
-                      <p className='text-gray-800 font-semibold'>Comm-IT</p>
-                      <p className='text-gray-600 text-sm'>Ai Payroll System</p>
-                    </div>
-                  </div>
-                  <div className='absolute bottom-4 right-4'>
-                    <p className='special-font text-2xl font-bold gradient-text-two'>
-                      Streamline Your Payroll with AI Precision
-                    </p>
-                  </div>
-                </div>
+                <img
+                  src={currentSlide.image}
+                  alt={currentSlide.alt}
+                  className='w-[90%] sm:w-[85%] md:w-full h-full object-contain rounded-3xl bg-white mx-auto pointer-events-none'
+                />
+                {/* Info Button */}
+                <button
+                  onClick={() => setIsPopupOpen(true)}
+                  className='absolute top-4 right-4 bg-white/80 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
+                  aria-label='Show slide details'
+                >
+                  <span className='text-xl font-bold'>i</span>
+                </button>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
 
-        {/* Navigation Dots (Manually Written) */}
+        {/* Navigation Dots */}
         <div className='flex justify-center mt-4 space-x-2'>
           <button
             onClick={() => {
@@ -167,7 +196,7 @@ const SwipeCarousel = () => {
               setCurrentIndex(0);
               setPage([0, direction]);
             }}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${
               currentIndex === 0 ? 'bg-gray-500' : 'bg-gray-300'
             }`}
             aria-label='Go to slide 1'
@@ -178,13 +207,79 @@ const SwipeCarousel = () => {
               setCurrentIndex(1);
               setPage([1, direction]);
             }}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${
               currentIndex === 1 ? 'bg-gray-500' : 'bg-gray-300'
             }`}
             aria-label='Go to slide 2'
           />
         </div>
       </div>
+
+      {/* Popup for Slide Details */}
+      <AnimatePresence>
+        {isPopupOpen && (
+          <motion.div
+            key='popup'
+            variants={popupVariants}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+            transition={{ duration: 0.3 }}
+            className='fixed inset-0 bg-black/90 backdrop-blur-lg flex items-center justify-center z-50'
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setIsPopupOpen(false);
+            }}
+          >
+            <motion.div className='p-6 rounded-lg shadow-lg max-w-3xl w-full mx-4 relative flex flex-col text-white'>
+              {/* Close Button (X) centered at the top */}
+              <div className='w-full flex justify-center'>
+                <button
+                  onClick={() => setIsPopupOpen(false)}
+                  className='text-white bg-gray-300/20 px-3 cursor-pointer rounded-full pb-1 text-4xl font-thin hover:text-gray-300 transition-colors mb-10'
+                >
+                  ×
+                </button>
+              </div>
+
+              {/* Text Content */}
+              <div className='flex gap-5'>
+                <div className=' w-[40%]'>
+                  <h3 className='text-2xl font-medium '>
+                    {currentSlide.title}
+                  </h3>
+                  <h3 className='text-lg text-white/50 mb-4'>
+                    {currentSlide.subheading}
+                  </h3>
+                  <div className='w-full border-t border-gray-300 my-4'></div>
+                  <p className='text-2xl mb-2 text-white'>
+                    {currentSlide.savings}
+                  </p>
+                  <p className='text-lg mb-2 text-white/50'>
+                    Time and resource savings
+                  </p>
+                </div>
+                <div className='w-[60%]'>
+                  <p className='text-lg mb-4 text-white/50'>
+                    {currentSlide.description}
+                  </p>
+                  <h4 className='text-lg mb-2 text-white'>Problem</h4>
+                  <p className='text-lg text-white/50'>
+                    {currentSlide.problem}
+                  </p>
+                  {/* Image Section below the text */}
+                  <div className='w-full flex justify-center mt-6'>
+                    <img
+                      src='https://images.unsplash.com/photo-1621354598022-16599af1b8b2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                      alt='Child playing'
+                      className='w-full max-w-md rounded-lg object-cover'
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
