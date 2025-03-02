@@ -51,8 +51,8 @@ const Hero = () => {
             {/* Loved by Founders */}
             <div className='flex items-center space-x-4 text-gray-300 mt-4 sm:mt-0 sm:space-x-3 md:space-x-3 lg:space-x-4 xl:space-x-4'>
               <div className='text-base sm:text-sm md:text-base lg:text-base xl:text-lg'>
-                <span>Loved by founders</span> <br />
-                <span>worldwide</span>
+                <span>AI in Enterprise </span> <br />
+                <span>Solutions</span>
               </div>
               {/* <div className='flex -space-x-2'>
                 <img
