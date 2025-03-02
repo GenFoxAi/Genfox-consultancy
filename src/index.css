@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: 'Inter', serif;
+    color: white;
+    scroll-behavior: smooth;
+  }
+}
+
+.special-font {
+  font-family: 'Plus Jakarta Sans', serif;
+}
+
+.background-one {
+  background-image:linear-gradient(to bottom, rgb(15, 17, 18) 45%, rgb(154,160,163) 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ffffff, #d7d5d5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; 
+}
+.gradient-text-two {
+  background: linear-gradient(to bottom, #bebebe, #605f5f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; 
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
