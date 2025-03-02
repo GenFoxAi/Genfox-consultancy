@@ -105,7 +105,7 @@ const HowItWorks = () => {
           >
             {/* Circle 1 - Original diagonal movement */}
             <motion.div
-              className='w-12 sm:w-16 h-12 sm:h-16 rounded-full border-2 absolute'
+              className='w-6 sm:w-6 h-6 sm:h-6 rounded-full border-2 absolute'
               animate={{
                 scale: [1, 1, 1],
                 rotate: [0, 180, 360],
@@ -122,7 +122,7 @@ const HowItWorks = () => {
 
             {/* Circle 2 - Horizontal movement */}
             <motion.div
-              className='w-12 sm:w-16 h-12 sm:h-16 rounded-full border-2 absolute'
+              className='w-8 sm:w-8 h-8 sm:h-8 rounded-full border-2 absolute'
               animate={{
                 scale: [1, 1, 1],
                 rotate: [0, 90, 0],
