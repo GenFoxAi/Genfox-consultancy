@@ -133,7 +133,7 @@ const SwipeCarousel = () => {
                 />
                 <button
                   onClick={() => setIsPopupOpen(true)}
-                  className='absolute top-4 right-4 bg-white/80 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
+                  className='absolute top-4 right-4  rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
                   aria-label='Show slide details'
                 >
                   <span className='text-xl font-bold cursor-pointer hover:text-blue-500'>
@@ -167,7 +167,7 @@ const SwipeCarousel = () => {
                 />
                 <button
                   onClick={() => setIsPopupOpen(true)}
-                  className='absolute top-4 right-4 bg-white/80 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
+                  className='absolute top-4 right-4  rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
                   aria-label='Show slide details'
                 >
                   <span className='text-xl font-bold cursor-pointer hover:text-blue-500'>
