@@ -54,7 +54,7 @@ const Hero = () => {
                 <span>Loved by founders</span> <br />
                 <span>worldwide</span>
               </div>
-              <div className='flex -space-x-2'>
+              {/* <div className='flex -space-x-2'>
                 <img
                   src='/pic-1.avif'
                   alt='Founder1'
@@ -70,7 +70,7 @@ const Hero = () => {
                   alt='Founder 3'
                   className='w-10 h-10 rounded-full sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12'
                 />
-              </div>
+              </div> */}
               <span className='text-sm w-10 h-10 flex justify-center items-center bg-[#8d9294] rounded-full text-white sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12'>
                 ↓
               </span>
