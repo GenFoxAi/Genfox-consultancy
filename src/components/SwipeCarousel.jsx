@@ -20,7 +20,7 @@ const SwipeCarousel = () => {
         'The company faced inefficiencies in managing daily tasks such as child attendance tracking, meal planning, and parent communication. These repetitive tasks required significant staff involvement, leading to a drain on time and resources that could be better spent on direct child engagement.',
       image: '/test1.png',
       video:
-        'https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/view?usp=sharing', // Embeddable Google Drive link
+        'https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/view?usp=sharing',
       alt: 'donna',
     },
     {
@@ -31,7 +31,7 @@ const SwipeCarousel = () => {
       problem:
         'Challenges in managing operational tasks led to inefficiencies.',
       image: '/test2.png',
-      video: '', // Add a second video link here if available
+      video: '', // No video for the second slide
       alt: 'commit',
     },
   ];
@@ -133,7 +133,7 @@ const SwipeCarousel = () => {
                 />
                 <button
                   onClick={() => setIsPopupOpen(true)}
-                  className='absolute top-4 right-4  rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
+                  className='absolute top-4 right-4 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
                   aria-label='Show slide details'
                 >
                   <span className='text-xl font-bold cursor-pointer hover:text-blue-500'>
@@ -167,7 +167,7 @@ const SwipeCarousel = () => {
                 />
                 <button
                   onClick={() => setIsPopupOpen(true)}
-                  className='absolute top-4 right-4  rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
+                  className='absolute top-4 right-4 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
                   aria-label='Show slide details'
                 >
                   <span className='text-xl font-bold cursor-pointer hover:text-blue-500'>
@@ -218,71 +218,61 @@ const SwipeCarousel = () => {
             }}
           >
             <motion.div
-              key='popup'
-              variants={popupVariants}
-              initial='hidden'
-              animate='visible'
-              exit='exit'
-              transition={{ duration: 0.3 }}
-              className='fixed inset-0 bg-black/90 backdrop-blur-lg flex items-center justify-center z-50 px-4'
-              onClick={(e) => {
-                if (e.target === e.currentTarget) setIsPopupOpen(false);
-              }}
+              className='p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto relative text-white custom-scrollbar'
             >
-              <motion.div className='p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto relative text-white'>
-                <div className='w-full flex justify-center mb-4 sm:mb-6'>
-                  <button
-                    onClick={() => setIsPopupOpen(false)}
-                    className='text-white bg-gray-300/20 px-3 cursor-pointer rounded-full pb-1 text-2xl sm:text-4xl font-thin hover:text-gray-300 transition-colors'
-                  >
-                    ×
-                  </button>
-                </div>
-                <div className='flex flex-col sm:flex-row gap-4 sm:gap-6'>
-                  <div className='w-full sm:w-[40%]'>
-                    <h3 className='text-xl sm:text-2xl font-medium'>
-                      {currentSlide.title}
+              <div className='w-full flex justify-center mb-4 sm:mb-6'>
+                <button
+                  onClick={() => setIsPopupOpen(false)}
+                  className='text-white bg-gray-300/20 px-3 cursor-pointer rounded-full pb-1 text-2xl sm:text-4xl font-thin hover:text-gray-300 transition-colors'
+                >
+                  ×
+                </button>
+              </div>
+              <div className='flex flex-col sm:flex-row gap-4 sm:gap-6'>
+                <div className='w-full sm:w-[40%]'>
+                  <h3 className='text-xl sm:text-2xl font-medium'>
+                    {currentSlide.title}
+                  </h3>
+                  {currentSlide.subheading && (
+                    <h3 className='text-base sm:text-lg text-white/50 mt-1 sm:mt-2'>
+                      {currentSlide.subheading}
                     </h3>
-                    {currentSlide.subheading && (
-                      <h3 className='text-base sm:text-lg text-white/50 mt-1 sm:mt-2'>
-                        {currentSlide.subheading}
-                      </h3>
-                    )}
-                    <div className='w-full border-t border-gray-300 my-3 sm:my-4'></div>
-                    <p className='text-xl sm:text-2xl mb-1 sm:mb-2 text-white'>
-                      {currentSlide.savings}
-                    </p>
-                    <p className='text-base sm:text-lg text-white/50'>
-                      Time and resource savings
-                    </p>
-                  </div>
-                  <div className='w-full sm:w-[60%]'>
-                    <p className='text-base sm:text-lg mb-3 sm:mb-4 text-white/50'>
-                      {currentSlide.description}
-                    </p>
-                    <h4 className='text-base sm:text-lg mb-1 sm:mb-2 text-white'>
-                      Problem
-                    </h4>
-                    <p className='text-base sm:text-lg text-white/50 mb-4'>
-                      {currentSlide.problem}
-                    </p>
-                  </div>
-                </div>
-                {/* Moved media out of the column layout to be full-width */}
-                <div className='w-full mt-4 flex flex-col items-center gap-4'>
-                  <h4 className='text-base self-start sm:text-lg mb-1 sm:mb-2 text-white'>
-                    Assets
-                  </h4>
-                  <img
-                    src={currentSlide.image}
-                    alt={currentSlide.alt}
-                    className='w-full h-auto rounded-lg object-contain'
-                  />
+                  )}
                   <div className='w-full border-t border-gray-300 my-3 sm:my-4'></div>
-                  <h4 className='text-base self-start sm:text-lg mb-1 sm:mb-2 text-white'>
-                    Video
+                  <p className='text-xl sm:text-2xl mb-1 sm:mb-2 text-white'>
+                    {currentSlide.savings}
+                  </p>
+                  <p className='text-base sm:text-lg text-white/50'>
+                    Time and resource savings
+                  </p>
+                </div>
+                <div className='w-full sm:w-[60%]'>
+                  <p className='text-base sm:text-lg mb-3 sm:mb-4 text-white/50'>
+                    {currentSlide.description}
+                  </p>
+                  <h4 className='text-base sm:text-lg mb-1 sm:mb-2 text-white'>
+                    Problem
                   </h4>
-                  {currentSlide.video && (
+                  <p className='text-base sm:text-lg text-white/50 mb-4'>
+                    {currentSlide.problem}
+                  </p>
+                </div>
+              </div>
+              <div className='w-full mt-4 flex flex-col items-center gap-4'>
+                <h4 className='text-base self-start sm:text-lg mb-1 sm:mb-2 text-white'>
+                  Assets
+                </h4>
+                <img
+                  src={currentSlide.image}
+                  alt={currentSlide.alt}
+                  className='w-full h-auto rounded-lg object-contain'
+                />
+                {currentIndex === 0 && currentSlide.video && (
+                  <>
+                    <div className='w-full border-t border-gray-300 my-3 sm:my-4'></div>
+                    <h4 className='text-base self-start sm:text-lg mb-1 sm:mb-2 text-white'>
+                      Video
+                    </h4>
                     <iframe
                       src='https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/preview'
                       width='100%'
@@ -290,9 +280,9 @@ const SwipeCarousel = () => {
                       allow='autoplay'
                       className='w-full rounded-lg'
                     ></iframe>
-                  )}
-                </div>
-              </motion.div>
+                  </>
+                )}
+              </div>
             </motion.div>
           </motion.div>
         )}
