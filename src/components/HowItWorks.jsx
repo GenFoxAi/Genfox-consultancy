@@ -44,8 +44,8 @@ const HowItWorks = () => {
       </h1>
       <div className='text-left space-y-4 sm:space-y-6'>
         {/* Step 1 - Light Card */}
-        <div className='bg-white text-black p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-4xl shadow-lg w-full sm:w-[48%] sm:inline-block sm:mr-[1%] mb-2 sm:mb-[6px] align-top h-auto min-h-[350px] sm:h-[400px]'>
-          <div className='text-base sm:text-lg font-semibold mb-28 sm:mb-40 border w-fit rounded-full px-2'>
+        <div className='bg-white text-black p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-4xl shadow-lg w-full sm:w-[48%] sm:inline-block sm:mr-[2%] mb-2 sm:mb-[18px] align-top h-auto min-h-[50px] sm:h-[280px] hover:scale-102'>
+          <div className='text-base sm:text-lg font-semibold mb-8 sm:mb-8 border w-fit rounded-full px-2'>
             Step 1
           </div>
           <h2 className='text-xl sm:text-2xl font-semibold mb-3'>
@@ -59,8 +59,8 @@ const HowItWorks = () => {
         </div>
 
         {/* Step 2 - Dark Card */}
-        <div className='bg-[#19181b] text-white p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-4xl shadow-lg w-full sm:w-[48%] sm:inline-block mb-2 sm:mb-[12px] align-top h-auto min-h-[350px] sm:h-[400px]'>
-          <div className='text-base sm:text-lg font-semibold mb-28 sm:mb-40 border w-fit rounded-full px-2'>
+        <div className='bg-[#19181b] text-white p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-4xl shadow-lg w-full sm:w-[48%] sm:inline-block mb-2 sm:mb-[12px] align-top h-auto min-h-[50px] sm:h-[280px] hover:scale-102'>
+          <div className='text-base sm:text-lg font-semibold mb-8 sm:mb-8 border w-fit rounded-full px-2'>
             Step 2
           </div>
           <h2 className='text-xl sm:text-2xl font-semibold mb-3'>
@@ -74,8 +74,8 @@ const HowItWorks = () => {
         </div>
 
         {/* Step 3 - Light Card */}
-        <div className='bg-[#19181b] text-white p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-4xl shadow-lg w-full sm:w-[48%] sm:inline-block sm:mr-[1%] mb-2 sm:mb-[6px] align-top h-auto min-h-[350px] sm:h-[400px]'>
-          <div className='text-base sm:text-lg font-semibold mb-28 sm:mb-40 border w-fit rounded-full px-2'>
+        <div className='bg-[#19181b] text-white p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-4xl shadow-lg w-full sm:w-[48%] sm:inline-block sm:mr-[2%] mb-2 sm:mb-[6px] align-top h-auto min-h-[50px] sm:h-[280px] hover:scale-102'>
+          <div className='text-base sm:text-lg font-semibold mb-8 sm:mb-8 border w-fit rounded-full px-2'>
             Step 3
           </div>
           <h2 className='text-xl sm:text-2xl font-semibold mb-3'>
@@ -89,71 +89,13 @@ const HowItWorks = () => {
         </div>
 
         {/* Step 4 - Dark Card with Three Animated Circles */}
-        <div className='bg-[#19181b] text-white p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-4xl shadow-lg w-full sm:w-[48%] sm:inline-block mb-2 sm:mb-[6px] align-top flex flex-col h-auto min-h-[550px] sm:h-[600px]'>
-          <div className='text-base sm:text-lg font-semibold mb-14 sm:mb-14 border w-fit rounded-full px-2'>
+        <div className='bg-[#19181b] text-white p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-4xl shadow-lg w-full sm:w-[48%] sm:inline-block mb-2 sm:mb-[6px] align-top flex flex-col h-auto min-h-[50px] sm:h-[280px] hover:scale-102'>
+          <div className='text-base sm:text-lg font-semibold mb-8 sm:mb-8 border w-fit rounded-full px-2'>
             Step 4
           </div>
 
           {/* Animated Circles Container */}
-          <motion.div
-            ref={ref}
-            variants={circleVariants}
-            initial='hidden'
-            animate={controls}
-            className='w-32 sm:w-44 h-32 sm:h-44 rounded-full border-2 
-                      flex items-center justify-center shadow-lg mx-auto self-center mb-8 sm:mb-16 relative'
-          >
-            {/* Circle 1 - Original diagonal movement */}
-            <motion.div
-              className='w-6 sm:w-6 h-6 sm:h-6 rounded-full border-2 absolute'
-              animate={{
-                scale: [1, 1, 1],
-                rotate: [0, 180, 360],
-                x: [-40, 40, -40],
-                y: [-40, 40, -40],
-              }}
-              transition={{
-                duration: 2,
-                ease: 'easeInOut',
-                times: [0, 0.5, 1],
-                repeat: Infinity,
-              }}
-            />
-
-            {/* Circle 2 - Horizontal movement */}
-            <motion.div
-              className='w-8 sm:w-8 h-8 sm:h-8 rounded-full border-2 absolute'
-              animate={{
-                scale: [1, 1, 1],
-                rotate: [0, 90, 0],
-                x: [-50, 50, -50],
-                y: 0,
-              }}
-              transition={{
-                duration: 1.8,
-                ease: 'easeInOut',
-                times: [0, 0.5, 1],
-                repeat: Infinity,
-              }}
-            />
-
-            {/* Circle 3 - Vertical movement */}
-            <motion.div
-              className='w-12 sm:w-16 h-12 sm:h-16 rounded-full border-2 absolute'
-              animate={{
-                scale: [1, 1, 1],
-                rotate: [0, -90, 0],
-                x: 0,
-                y: [-50, 50, -50],
-              }}
-              transition={{
-                duration: 2.2,
-                ease: 'easeInOut',
-                times: [0, 0.5, 1],
-                repeat: Infinity,
-              }}
-            />
-          </motion.div>
+        
 
           <h2 className='text-xl sm:text-2xl font-semibold mb-3'>
             Scale & Dominate

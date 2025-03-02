@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AiOutlineInfoCircle } from 'react-icons/ai';
+import { AiOutlineInfoCircle, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import { slideData } from '../utils/content';
 
 const SwipeCarousel = () => {
@@ -58,15 +58,6 @@ const SwipeCarousel = () => {
     exit: { opacity: 0, scale: 0.8 },
   };
 
-  const swipeThreshold = 50;
-
-  const handleDragEnd = (e, { offset }) => {
-    const swipeDistance = offset.x;
-    if (Math.abs(swipeDistance) > swipeThreshold) {
-      paginate(swipeDistance < 0 ? 1 : -1);
-    }
-  };
-
   const currentSlide = slideData[currentIndex];
 
   return (
@@ -93,16 +84,13 @@ const SwipeCarousel = () => {
                 x: { type: 'spring', stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              drag='x'
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.2}
-              onDragEnd={handleDragEnd}
-              className='absolute w-full h-full cursor-grab active:cursor-grabbing select-none'
+              className='absolute w-full h-full select-none'
             >
               <img
                 src={currentSlide.image}
                 alt={currentSlide.alt}
-                className='w-[90%] sm:w-[85%] md:w-full h-full object-contain rounded-3xl bg-white mx-auto pointer-events-none'
+                onClick={() => setIsPopupOpen(true)}
+                className='w-[90%] sm:w-[85%] md:w-full h-full object-contain rounded-3xl bg-white mx-auto cursor-pointer'
               />
               <button
                 onClick={() => setIsPopupOpen(true)}
@@ -115,6 +103,22 @@ const SwipeCarousel = () => {
               </button>
             </motion.div>
           </AnimatePresence>
+          
+          {/* Navigation Arrows */}
+          <button
+            onClick={() => paginate(-1)}
+            className='absolute ml-1 cursor-pointer left-0 top-1/2 -translate-y-1/2 p-2 text-white bg-black/50 rounded-full hover:bg-black/70 transition-colors'
+            aria-label='Previous slide'
+          >
+            <AiOutlineLeft size={24} />
+          </button>
+          <button
+            onClick={() => paginate(1)}
+            className='absolute mr-1 cursor-pointer right-0 top-1/2 -translate-y-1/2 p-2 text-white bg-black/50 rounded-full hover:bg-black/70 transition-colors'
+            aria-label='Next slide'
+          >
+            <AiOutlineRight size={24} />
+          </button>
         </div>
         <div className='flex justify-center mt-4 space-x-2'>
           {Array.from({ length: totalSlides }).map((_, index) => (
@@ -147,7 +151,8 @@ const SwipeCarousel = () => {
               if (e.target === e.currentTarget) setIsPopupOpen(false);
             }}
           >
-            <motion.div className='p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto relative text-white custom-scrollbar bg-black'>
+            {/* Popup content remains the same */}
+            <motion.div className='p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-6xl max-h-[90vh] overflow-y-auto relative text-white custom-scrollbar bg-black'>
               <div className='w-full flex justify-center mb-4 sm:mb-6'>
                 <button
                   onClick={() => setIsPopupOpen(false)}
@@ -169,44 +174,16 @@ const SwipeCarousel = () => {
                   <div className='w-full border-t border-gray-600 my-4'></div>
 
                   <div className='text-base sm:text-lg text-white/80 space-y-3'>
-                    <p>
-                      <span className='font-semibold text-white'>
-                        Launched:
-                      </span>{' '}
-                      Q1 2024
-                    </p>
-                    <p>
-                      <span className='font-semibold text-white'>
-                        Tech Stack:
-                      </span>{' '}
-                      AI, React, Cloud
-                    </p>
-                    <p>
-                      <span className='font-semibold text-white'>Users:</span>{' '}
-                      150+ Families
-                    </p>
-                    <p>
-                      <span className='font-semibold text-white'>Impact:</span>{' '}
-                      48% Time Saved
-                    </p>
-                    <p>
-                      <span className='font-semibold text-white'>
-                        Accuracy:
-                      </span>{' '}
-                      98% AI Detection
-                    </p>
-                    <p>
-                      <span className='font-semibold text-white'>
-                        Cost Savings:
-                      </span>{' '}
-                      $10K/Year
-                    </p>
+                    <p><span className='font-semibold text-white'>Launched:</span> Q1 2024</p>
+                    <p><span className='font-semibold text-white'>Tech Stack:</span> AI, React, Cloud</p>
+                    <p><span className='font-semibold text-white'>Users:</span> 150+ Families</p>
+                    <p><span className='font-semibold text-white'>Impact:</span> 48% Time Saved</p>
+                    <p><span className='font-semibold text-white'>Accuracy:</span> 98% AI Detection</p>
+                    <p><span className='font-semibold text-white'>Cost Savings:</span> $10K/Year</p>
                   </div>
 
                   <div className='w-full border-t border-gray-600 my-4'></div>
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
-                    Key Features
-                  </h4>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Key Features</h4>
                   <ul className='text-base sm:text-lg text-white/80 space-y-2 list-disc pl-5'>
                     <li>Real-time Attendance Tracking</li>
                     <li>AI-Powered Meal Planning</li>
@@ -215,34 +192,15 @@ const SwipeCarousel = () => {
                   </ul>
 
                   <div className='w-full border-t border-gray-600 my-4'></div>
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
-                    Team
-                  </h4>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Team</h4>
                   <div className='text-base sm:text-lg text-white/80 space-y-2'>
-                    <p>
-                      <span className='font-semibold text-white'>
-                        Lead Dev:
-                      </span>{' '}
-                      Jane Doe
-                    </p>
-                    <p>
-                      <span className='font-semibold text-white'>
-                        Designer:
-                      </span>{' '}
-                      John Smith
-                    </p>
-                    <p>
-                      <span className='font-semibold text-white'>
-                        AI Specialist:
-                      </span>{' '}
-                      Alex Carter
-                    </p>
+                    <p><span className='font-semibold text-white'>Lead Dev:</span> Jane Doe</p>
+                    <p><span className='font-semibold text-white'>Designer:</span> John Smith</p>
+                    <p><span className='font-semibold text-white'>AI Specialist:</span> Alex Carter</p>
                   </div>
 
                   <div className='w-full border-t border-gray-600 my-4'></div>
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
-                    Milestones
-                  </h4>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Milestones</h4>
                   <div className='text-base sm:text-lg text-white/80 space-y-2'>
                     <p>Q1 2024: Beta Launch</p>
                     <p>Q3 2024: 100+ Users</p>
@@ -251,35 +209,21 @@ const SwipeCarousel = () => {
                 </div>
 
                 <div className='w-full sm:w-[60%]'>
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
-                    Problem
-                  </h4>
-                  <p className='text-base sm:text-lg text-white/70 mb-4'>
-                    {currentSlide.problem}
-                  </p>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Problem</h4>
+                  <p className='text-base sm:text-lg text-white/70 mb-4'>{currentSlide.problem}</p>
                   <div className='w-full border-t border-gray-600 my-4'></div>
 
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
-                    Solution
-                  </h4>
-                  <p className='text-base sm:text-lg text-white/70 mb-4'>
-                    {currentSlide.solution}
-                  </p>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Solution</h4>
+                  <p className='text-base sm:text-lg text-white/70 mb-4'>{currentSlide.solution}</p>
                   <div className='w-full border-t border-gray-600 my-4'></div>
 
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
-                    Summary
-                  </h4>
-                  <p className='text-base sm:text-lg text-white/70 mb-4'>
-                    {currentSlide.summary}
-                  </p>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Summary</h4>
+                  <p className='text-base sm:text-lg text-white/70 mb-4'>{currentSlide.summary}</p>
                 </div>
               </div>
 
               <div className='w-full mt-6'>
-                <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
-                  Assets
-                </h4>
+                <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Assets</h4>
                 <img
                   src={currentSlide.image}
                   alt={currentSlide.alt}
@@ -288,9 +232,7 @@ const SwipeCarousel = () => {
                 {currentSlide.video && (
                   <>
                     <div className='w-full border-t border-gray-600 my-4'></div>
-                    <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
-                      Video
-                    </h4>
+                    <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Video</h4>
                     <iframe
                       src='https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/preview'
                       width='100%'
@@ -303,9 +245,7 @@ const SwipeCarousel = () => {
                 {currentSlide.additionalImages && currentSlide.additionalImages.length > 0 && (
                   <>
                     <div className='w-full border-t border-gray-600 my-4'></div>
-                    <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
-                      Additional Images
-                    </h4>
+                    <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Additional Images</h4>
                     <div className='grid grid-cols-2 gap-4'>
                       {currentSlide.additionalImages.map((img, index) => (
                         <div key={index} className='flex flex-col items-center'>
@@ -320,7 +260,6 @@ const SwipeCarousel = () => {
                     </div>
                   </>
                 )}
-
               </div>
             </motion.div>
           </motion.div>

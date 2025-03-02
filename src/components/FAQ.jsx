@@ -56,7 +56,7 @@ const FAQ = () => {
             </span>
             or mail us at{' '}
             <span className='text-white underline cursor-pointer'>
-              hey@genfox.ai
+              contact@genfox.ai
             </span>
           </p>
         </div>

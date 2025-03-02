@@ -7,15 +7,15 @@ const Footer = () => {
         {/* Top row: Copyright and social links */}
         <div className='flex flex-col md:flex-row items-center justify-between w-full mb-[8%]'>
           <div className='text-sm mb-2 md:mb-0'>
-            © 2025 © Genfox AI Agency Inc.
+            © 2025 Genfox AI Optimization Agency.
           </div>
           <div className='flex space-x-4 text-sm'>
             <a href='#' className='hover:text-white'>
-              LinkedIn
             </a>
             <span className='mx-1'>|</span>
             <a href='#' className='hover:text-white'>
-              Terms
+              LinkedIn
+              
             </a>
           </div>
         </div>

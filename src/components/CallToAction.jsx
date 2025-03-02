@@ -424,13 +424,13 @@ const CallToAction = () => {
             onClick={() => setIsOpen(true)}
             className='bg-white text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold w-full py-[10%] sm:py-[14%] md:py-[10%] rounded-[20px] sm:rounded-[25px] md:rounded-[30px] hover:bg-gray-200 tracking-tight cursor-pointer transition-transform duration-300 hover:scale-105'
           >
-            Book call
+            Book Now
           </button>
         </div>
 
         <p className='text-sm sm:text-base md:text-md font-light text-white/80 text-center'>
           or mail us at{' '}
-          <span className='underline cursor-pointer'>hey@genfox.ai</span>
+          <span className='underline cursor-pointer'>contact@genfox.ai</span>
         </p>
       </div>
 
