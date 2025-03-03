@@ -26,20 +26,20 @@ export default function Toad() {
 
     const getEndValue = () => {
       const vh = window.innerHeight;
-      return window.innerWidth <= 768 ? `+=${vh * 2}` : `+=${vh * 3}`;
+      return window.innerWidth <= 768 ? `+=${vh * 2}` : `+=${vh * 1.5}`;
     };
 
     gsap.to(refs.current, {
       scrollTrigger: {
         trigger: container.current,
-        scrub: true,
-        start: 'top 80%',
+        scrub: 1.1,
+        start: 'top 40%',
         end: getEndValue(),
       },
       opacity: 1,
-      duration: 0.3,
+      duration: 0.01,
       ease: 'none',
-      stagger: window.innerWidth <= 768 ? 0.05 : 0.1,
+      stagger: window.innerWidth <= 768 ? 0.05 : 120,
     });
   };
 
