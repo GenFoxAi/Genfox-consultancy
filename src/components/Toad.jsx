@@ -26,7 +26,7 @@ export default function Toad() {
 
     const getEndValue = () => {
       const vh = window.innerHeight;
-      return window.innerWidth <= 768 ? `+=${vh * 2}` : `+=${vh * 0.5}`;
+      return window.innerWidth <= 768 ? `+=${vh * 2}` : `+=${vh * 0.8}`;
     };
 
     gsap.to(refs.current, {
