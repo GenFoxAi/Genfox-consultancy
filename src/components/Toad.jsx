@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 import styles from './page.module.css';
 import { useRef, useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -33,10 +33,11 @@ export default function Toad() {
       scrollTrigger: {
         trigger: container.current,
         scrub: true,
-        start: 'top 120%',
+        start: 'top 80%',
         end: getEndValue(),
       },
       opacity: 1,
+      duration: 0.3,
       ease: 'none',
       stagger: window.innerWidth <= 768 ? 0.05 : 0.1,
     });
