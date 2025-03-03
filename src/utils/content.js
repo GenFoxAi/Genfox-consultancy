@@ -164,29 +164,98 @@ export const services = [
 
 export const slideData = [
   {
-    projectName: 'Kinder Bench Automation System',
-    usecase: 'Streamlining Kindergarten Operations with AI-Powered Automation',
+    projectName:
+      'AI Payroll ESS: Automating Payroll & Approvals with Conversational AI & Generative UI',
+    usecase: 'Empowering Enterprises with AI-driven Payroll Self-Service',
+    usecasedesc:
+      'In large-scale enterprises, payroll operations are complex, time-sensitive, and resource-intensive. Our AI-powered Employee Self-Service (ESS) solution redefines payroll management by integrating Conversational AI (CAI) with Generative UI (GUI), eliminating manual intervention and streamlining approvals. With intelligent automation, employees and HR teams experience seamless, real-time payroll interactions, reducing inefficiencies while ensuring compliance and security at scale.',
+    probelmheading: 'Fragmented Payroll Processes & High Operational Overhead',
     problem:
-      'Managing a kindergarten involves numerous repetitive tasks such as tracking child attendance, coordinating meal schedules, planning daily activities, and maintaining consistent communication with parents. These responsibilities demanded significant time and effort from staff, pulling their focus away from meaningful child engagement and educational priorities. Manual processes often led to errors like miscounting attendance or overlooking dietary restrictions, causing delays in daily operations and inconsistencies in record-keeping. This inefficiency frustrated both staff, who felt overwhelmed by administrative burdens, and parents, who received delayed or inaccurate updates about their children. The lack of streamlined systems strained the kindergarten’s limited resources, making it difficult to allocate staff effectively or respond to unexpected challenges. Additionally, the reliance on paper-based methods and outdated tools hindered scalability, preventing the institution from growing or adapting to increasing enrollment and parental expectations.',
+      'Enterprise payroll systems often struggle with disjointed interfaces, manual approvals, and high-volume employee queries. Employees face delays in accessing payslips, tracking deductions, and resolving payroll issues, while HR teams are burdened with repetitive inquiries and approval bottlenecks. This lack of automation impacts operational efficiency, employee satisfaction, and compliance readiness.',
+    solutionheading: 'AI-Powered Self-Service with Embedded Workflows',
     solution:
-      'The Kinder Bench Automation System leverages advanced AI technology to automate key operational tasks, transforming how kindergartens function daily. Facial recognition technology accurately tracks attendance in real time, eliminating the need for manual roll calls and reducing errors significantly. AI algorithms optimize meal planning by analyzing children’s dietary needs, allergies, and available inventory, ensuring every child receives appropriate nutrition without waste or oversight. Automated messaging systems deliver timely updates to parents about their child’s day, including attendance confirmations and activity highlights, fostering trust and transparency. Additionally, AI-driven suggestions analyze educational goals and past activities to recommend engaging, age-appropriate plans, easing the burden on staff to brainstorm constantly. The system integrates seamlessly into existing workflows with an intuitive interface that requires minimal training, allowing staff to adopt it quickly. It also includes safeguards to ensure data privacy and compliance with regulations, making it a secure choice for modern kindergartens.',
+      'Our Conversational AI-driven ESS integrates with enterprise payroll systems, enabling employees to retrieve payslips, process approvals, and execute payroll-related actions within a unified AI-powered interface. Generative UI dynamically renders interactive widgets, allowing users to approve salary revisions, manage tax documents, and submit reimbursement claims—all within a conversational flow. The AI acts as a proactive assistant, anticipating user needs, ensuring policy compliance, and delivering insights on salary structures, deductions, and benefits.',
+    summaryheading: 'Scalable, Intelligent & Secure Payroll Automation',
     summary:
-      'The system reduced administrative time by 48%, allowing staff to focus on child development. Parents reported higher satisfaction due to better communication, and operational costs dropped by reducing errors. It positioned the kindergarten as a scalable, innovative institution.',
+      'This solution eliminates navigation complexities, enabling employees to complete payroll tasks in seconds through AI-driven workflows. By automating request handling, approvals, and document access, enterprises reduce HR workload, improve employee productivity, and enhance governance. API-based authentication ensures secure, real-time access to payroll data, making it a scalable solution for global enterprises.',
+
+    keyFeatures: [
+      {
+        title: 'Conversational AI for Payroll',
+        description:
+          'Employees engage via natural language queries to retrieve payslips, track earnings, and resolve payroll concerns instantly.',
+      },
+      {
+        title: 'Automated Approvals & Workflows',
+        description:
+          'AI-driven widgets for salary approvals, leave adjustments, and tax declarations, reducing manual HR interventions.',
+      },
+      {
+        title: 'Enterprise-Grade Security',
+        description:
+          'API-based authentication ensures compliance with enterprise security policies, safeguarding payroll data.',
+      },
+      {
+        title: 'Seamless System Integration',
+        description:
+          'Works with SAP, Workday, Oracle, and other enterprise HRMS platforms for real-time payroll processing.',
+      },
+      {
+        title: 'Multi-Language & Customization',
+        description:
+          'Supports English, Arabic, and enterprise-specific policy configurations for a personalized experience.',
+      },
+    ],
+
     image: '/test1.png',
     video:
       'https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/view?usp=sharing',
     alt: 'donna',
   },
   {
-    projectName: 'Kinder Bench Parent Portal',
-    usecase: 'Enhancing Parent Engagement with a Digital Interface',
-    problem:
-      'Staff faced persistent challenges in keeping parents informed about their children’s progress, daily activities, and important announcements, relying heavily on outdated methods like paper notes, scattered emails, and time-consuming phone calls. These inefficient communication channels frequently led to miscommunication, such as parents missing critical updates or receiving conflicting information about schedules. The process frustrated parents, who felt disconnected from their child’s kindergarten experience, and left staff overwhelmed by a flood of follow-up inquiries that could have been avoided with better tools. The lack of a centralized system meant that staff spent hours compiling updates or addressing individual parental concerns, detracting from their ability to focus on classroom responsibilities. This inefficiency eroded trust between the kindergarten and families, as parents grew increasingly dissatisfied with the lack of transparency and responsiveness. Moreover, the absence of a scalable solution limited the institution’s ability to manage growing numbers of families or adapt to their evolving needs.',
-    solution:
-      'The Kinder Bench Parent Portal is an innovative, AI-powered platform designed to bridge the communication gap between staff and parents, offering a robust digital interface accessible via both web and mobile devices. It provides real-time access to critical information such as attendance records, detailed meal logs, daily schedules, and developmental milestones, empowering parents to stay closely connected to their child’s day. The AI component generates personalized reports tailored to each child’s activities and progress, giving parents deeper insights without requiring staff intervention. Automated notifications keep families informed of sudden changes, upcoming events, or emergencies, ensuring they’re never caught off guard. The portal also supports multimedia updates, allowing staff to share photos, videos, or notes about special moments, enhancing the emotional bond between home and school. With an easy-to-navigate design, it fosters direct, two-way communication, enabling parents to send questions or feedback effortlessly. Built with scalability in mind, the platform adapts to increasing users and integrates security features to protect sensitive data, making it a reliable long-term solution.',
-    summary:
-      'The portal cut staff inquiry workload by 40%, improved parent trust and engagement with instant updates, and strengthened community ties. Its scalability ensures growth potential, bridging the home-school gap effectively.',
-    image: '/test2.png',
+    projectName:
+    'AI Payroll ESS: Automating Payroll & Approvals with Conversational AI & Generative UI',
+  usecase: 'Empowering Enterprises with AI-driven Payroll Self-Service',
+  usecasedesc:
+    'In large-scale enterprises, payroll operations are complex, time-sensitive, and resource-intensive. Our AI-powered Employee Self-Service (ESS) solution redefines payroll management by integrating Conversational AI (CAI) with Generative UI (GUI), eliminating manual intervention and streamlining approvals. With intelligent automation, employees and HR teams experience seamless, real-time payroll interactions, reducing inefficiencies while ensuring compliance and security at scale.',
+  probelmheading: 'Fragmented Payroll Processes & High Operational Overhead',
+  problem:
+    'Enterprise payroll systems often struggle with disjointed interfaces, manual approvals, and high-volume employee queries. Employees face delays in accessing payslips, tracking deductions, and resolving payroll issues, while HR teams are burdened with repetitive inquiries and approval bottlenecks. This lack of automation impacts operational efficiency, employee satisfaction, and compliance readiness.',
+  solutionheading: 'AI-Powered Self-Service with Embedded Workflows',
+  solution:
+    'Our Conversational AI-driven ESS integrates with enterprise payroll systems, enabling employees to retrieve payslips, process approvals, and execute payroll-related actions within a unified AI-powered interface. Generative UI dynamically renders interactive widgets, allowing users to approve salary revisions, manage tax documents, and submit reimbursement claims—all within a conversational flow. The AI acts as a proactive assistant, anticipating user needs, ensuring policy compliance, and delivering insights on salary structures, deductions, and benefits.',
+  summaryheading: 'Scalable, Intelligent & Secure Payroll Automation',
+  summary:
+    'This solution eliminates navigation complexities, enabling employees to complete payroll tasks in seconds through AI-driven workflows. By automating request handling, approvals, and document access, enterprises reduce HR workload, improve employee productivity, and enhance governance. API-based authentication ensures secure, real-time access to payroll data, making it a scalable solution for global enterprises.',
+
+  keyFeatures: [
+    {
+      title: 'Conversational AI for Payroll',
+      description:
+        'Employees engage via natural language queries to retrieve payslips, track earnings, and resolve payroll concerns instantly.',
+    },
+    {
+      title: 'Automated Approvals & Workflows',
+      description:
+        'AI-driven widgets for salary approvals, leave adjustments, and tax declarations, reducing manual HR interventions.',
+    },
+    {
+      title: 'Enterprise-Grade Security',
+      description:
+        'API-based authentication ensures compliance with enterprise security policies, safeguarding payroll data.',
+    },
+    {
+      title: 'Seamless System Integration',
+      description:
+        'Works with SAP, Workday, Oracle, and other enterprise HRMS platforms for real-time payroll processing.',
+    },
+    {
+      title: 'Multi-Language & Customization',
+      description:
+        'Supports English, Arabic, and enterprise-specific policy configurations for a personalized experience.',
+    },
+  ],
+    image: '/Usecase 2.jpg',
     video: '',
     alt: 'commit',
   },
@@ -202,6 +271,6 @@ export const slideData = [
     image: '/Frame 1.png',
     video: '',
     alt: 'whatapp',
-    additionalImages: ['/one.png', '/three.png', '/four.png', '/two.png', ,],
+    additionalImages: ['/one.png', '/two.png', '/three.png', '/four.png'],
   },
 ];

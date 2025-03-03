@@ -48,10 +48,10 @@ const SwipeCarousel = () => {
   };
 
   const handleDownload = () => {
-    const pdfUrl = "/invoice.pdf"; 
-    const link = document.createElement("a");
+    const pdfUrl = '/invoice.pdf';
+    const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = "example.pdf"; 
+    link.download = 'example.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -170,31 +170,25 @@ const SwipeCarousel = () => {
                   <h3 className='text-xl sm:text-2xl font-semibold text-white'>
                     {currentSlide.projectName}
                   </h3>
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mt-2'>
+                  <div className='w-full border-t border-gray-600 my-4' />
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mt-2 mb-3'>
                     Use Case
                   </h4>
-                  <p className='text-base sm:text-lg text-white/70'>
+                  <p className='text-base sm:text-lg font-medium text-white'>
                     {currentSlide.usecase}
+                  </p>
+                  <p className='text-base sm:text-lg text-white/70'>
+                    {currentSlide.usecasedesc}
                   </p>
                   <div className='w-full border-t border-gray-600 my-4' />
                 </div>
 
                 <div>
                   <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
-                    Key Features
-                  </h4>
-                  <ul className='text-base sm:text-lg text-white/80 space-y-2 list-disc pl-5'>
-                    <li>Real-time Attendance Tracking</li>
-                    <li>AI-Powered Meal Planning</li>
-                    <li>Integrated Chat System</li>
-                    <li>24/7 Live Support</li>
-                  </ul>
-                  <div className='w-full border-t border-gray-600 my-4' />
-                </div>
-
-                <div>
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
                     Problem
+                  </h4>
+                  <h4 className='text-lg sm:text-xl  text-white mb-1'>
+                    {currentSlide.probelmheading}
                   </h4>
                   <p className='text-base sm:text-lg text-white/70 mb-4'>
                     {currentSlide.problem}
@@ -206,6 +200,9 @@ const SwipeCarousel = () => {
                   <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
                     Solution
                   </h4>
+                  <h4 className='text-lg sm:text-xl  text-white mb-1'>
+                    {currentSlide.solutionheading}
+                  </h4>
                   <p className='text-base sm:text-lg text-white/70 mb-4'>
                     {currentSlide.solution}
                   </p>
@@ -216,9 +213,29 @@ const SwipeCarousel = () => {
                   <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
                     Summary
                   </h4>
+                  <h4 className='text-lg sm:text-xl  text-white mb-1'>
+                    {currentSlide.summaryheading}
+                  </h4>
                   <p className='text-base sm:text-lg text-white/70 mb-4'>
                     {currentSlide.summary}
                   </p>
+                  <div className='w-full border-t border-gray-600 my-4' />
+                </div>
+
+                <div>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
+                    Key Features
+                  </h4>
+                  <ul className='text-base sm:text-lg text-white/80 space-y-2 list-disc pl-5'>
+                    {currentSlide.keyFeatures.map((feature, index) => (
+                      <li key={index}>
+                        <span className='text-white font-semibold'>
+                          {feature.title}:
+                        </span>
+                        <span> {feature.description}</span>
+                      </li>
+                    ))}
+                  </ul>
                   <div className='w-full border-t border-gray-600 my-4' />
                 </div>
 
