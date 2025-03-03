@@ -88,8 +88,8 @@ export const teamMembers = [
   },
   {
     id: 5,
-    name: 'Krishna',
-    // title: 'Head of Data Engineering',
+    name: 'Krishna ',
+    // title: 'Head of Data  Engineering',
     image:
       'https://cdnb.artstation.com/p/assets/images/images/084/124/305/large/matthew-blank-profile-photo-2-1.jpg?1737590059',
   },
