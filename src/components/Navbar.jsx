@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
-import { Link, animateScroll as scroll } from 'react-scroll'; 
+import { Link, animateScroll as scroll } from 'react-scroll';
 
-export default function Navbar() {
+export default function Navbar({ setIsModalOpen }) { 
   const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,9 +39,9 @@ export default function Navbar() {
       variants={navbarVariants}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
-      <div className="max-w-[1500px] mx-auto flex items-center justify-between h-16 px-[4%] sm:px-[15%] ">
+      <div className="max-w-[1500px] mx-auto flex items-center justify-between h-16 px-[4%] sm:px-[15%]">
         {/* Logo Section */}
-        <div className="flex items-center bg-[#343736]/64 backdrop-blur-md rounded-full py-3 px-4 ">
+        <div className="flex items-center bg-[#343736]/10 backdrop-blur-2xl rounded-full py-3 px-4">
           <button
             onClick={scrollToTop}
             className="text-white font-bold text-2xl flex items-center ml-1 special-font cursor-pointer"
@@ -53,7 +53,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center space-x-6 bg-[#343736]/64 backdrop-blur-md rounded-full p-1">
+        <div className="hidden lg:flex items-center space-x-6 bg-[#343736]/10 backdrop-blur-2xl rounded-full p-1">
           <Link
             to="scroll-section"
             smooth={true}
@@ -68,7 +68,7 @@ export default function Navbar() {
             duration={500}
             className="text-white hover:text-gray-300 font-semibold py-3 px-2 rounded-full transition-colors cursor-pointer"
           >
-          Case Study
+            Case Study
           </Link>
           <Link
             to="team"
@@ -86,12 +86,12 @@ export default function Navbar() {
           >
             FAQ
           </Link>
-          <a
-            href="/buy"
-            className="bg-white pr-4 text-black font-semibold py-3 px-3 rounded-full hover:bg-gray-200 transition-colors"
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-white pr-4 cursor-pointer text-black font-semibold py-3 px-3 rounded-full hover:bg-gray-200 transition-colors"
           >
             Book Now
-          </a>
+          </button>
         </div>
 
         {/* Mobile Navigation (Toggle + Buy) */}
@@ -115,18 +115,17 @@ export default function Navbar() {
               />
             </svg>
           </button>
-          <a
-            href="/buy"
+          <button
+            onClick={() => setIsModalOpen(true)} // Open modal on click
             className="bg-white text-black font-semibold py-3 px-4 rounded-full hover:bg-gray-200 transition-colors"
           >
             Book Now
-          </a>
+          </button>
         </div>
 
         {/* Mobile Menu (Full-Screen Sidebar) */}
         {isOpen && (
           <div className="md:hidden fixed inset-0 bg-black/90 backdrop-blur-xl z-50 flex flex-col p-6">
-            {/* Close Button */}
             <button
               className="self-end p-2 text-gray-300 hover:text-white focus:outline-none"
               onClick={() => setIsOpen(false)}
@@ -147,7 +146,6 @@ export default function Navbar() {
               </svg>
             </button>
 
-            {/* Sidebar Links */}
             <div className="flex flex-col space-y-6 mt-8">
               <Link
                 to="scroll-section"

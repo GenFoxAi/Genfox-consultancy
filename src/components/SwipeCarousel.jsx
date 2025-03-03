@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AiOutlineInfoCircle, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+import {
+  AiOutlineInfoCircle,
+  AiOutlineLeft,
+  AiOutlineRight,
+} from 'react-icons/ai';
 import { slideData } from '../utils/content';
 
 const SwipeCarousel = () => {
@@ -8,7 +12,7 @@ const SwipeCarousel = () => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const totalSlides = 3;
+  const totalSlides = slideData.length;
 
   const paginate = (newDirection) => {
     const newIndex = (currentIndex + newDirection + totalSlides) % totalSlides;
@@ -19,19 +23,13 @@ const SwipeCarousel = () => {
   useEffect(() => {
     let autoPlayInterval;
     if (!isPopupOpen) {
-      autoPlayInterval = setInterval(() => {
-        paginate(1);
-      }, 8000);
+      autoPlayInterval = setInterval(() => paginate(1), 8000);
     }
     return () => clearInterval(autoPlayInterval);
   }, [currentIndex, isPopupOpen]);
 
   useEffect(() => {
-    if (isPopupOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = isPopupOpen ? 'hidden' : 'auto';
     return () => {
       document.body.style.overflow = 'auto';
     };
@@ -42,14 +40,21 @@ const SwipeCarousel = () => {
       x: direction > 0 ? '100%' : '-100%',
       opacity: 0,
     }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
+    center: { x: 0, opacity: 1 },
     exit: (direction) => ({
       x: direction < 0 ? '100%' : '-100%',
       opacity: 0,
     }),
+  };
+
+  const handleDownload = () => {
+    const pdfUrl = "/invoice.pdf"; 
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "example.pdf"; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const popupVariants = {
@@ -103,7 +108,7 @@ const SwipeCarousel = () => {
               </button>
             </motion.div>
           </AnimatePresence>
-          
+
           {/* Navigation Arrows */}
           <button
             onClick={() => paginate(-1)}
@@ -147,11 +152,10 @@ const SwipeCarousel = () => {
             exit='exit'
             transition={{ duration: 0.3 }}
             className='fixed inset-0 bg-black flex items-center justify-center z-50 px-4'
-            onClick={(e) => {
-              if (e.target === e.currentTarget) setIsPopupOpen(false);
-            }}
+            onClick={(e) =>
+              e.target === e.currentTarget && setIsPopupOpen(false)
+            }
           >
-            {/* Popup content remains the same */}
             <motion.div className='p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-6xl max-h-[90vh] overflow-y-auto relative text-white custom-scrollbar bg-black'>
               <div className='w-full flex justify-center mb-4 sm:mb-6'>
                 <button
@@ -161,105 +165,118 @@ const SwipeCarousel = () => {
                   ×
                 </button>
               </div>
-              <div className='flex flex-col sm:flex-row gap-6 sm:gap-8'>
-                <div className='w-full sm:w-[40%]'>
+              <div className='flex flex-col gap-6'>
+                <div>
                   <h3 className='text-xl sm:text-2xl font-semibold text-white'>
                     {currentSlide.projectName}
                   </h3>
-                  {currentSlide.usecase && (
-                    <h4 className='text-base sm:text-lg text-white/70 mt-1 sm:mt-2'>
-                      {currentSlide.usecase}
-                    </h4>
-                  )}
-                  <div className='w-full border-t border-gray-600 my-4'></div>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mt-2'>
+                    Use Case
+                  </h4>
+                  <p className='text-base sm:text-lg text-white/70'>
+                    {currentSlide.usecase}
+                  </p>
+                  <div className='w-full border-t border-gray-600 my-4' />
+                </div>
 
-                  <div className='text-base sm:text-lg text-white/80 space-y-3'>
-                    <p><span className='font-semibold text-white'>Launched:</span> Q1 2024</p>
-                    <p><span className='font-semibold text-white'>Tech Stack:</span> AI, React, Cloud</p>
-                    <p><span className='font-semibold text-white'>Users:</span> 150+ Families</p>
-                    <p><span className='font-semibold text-white'>Impact:</span> 48% Time Saved</p>
-                    <p><span className='font-semibold text-white'>Accuracy:</span> 98% AI Detection</p>
-                    <p><span className='font-semibold text-white'>Cost Savings:</span> $10K/Year</p>
-                  </div>
-
-                  <div className='w-full border-t border-gray-600 my-4'></div>
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Key Features</h4>
+                <div>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
+                    Key Features
+                  </h4>
                   <ul className='text-base sm:text-lg text-white/80 space-y-2 list-disc pl-5'>
                     <li>Real-time Attendance Tracking</li>
                     <li>AI-Powered Meal Planning</li>
                     <li>Integrated Chat System</li>
                     <li>24/7 Live Support</li>
                   </ul>
-
-                  <div className='w-full border-t border-gray-600 my-4'></div>
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Team</h4>
-                  <div className='text-base sm:text-lg text-white/80 space-y-2'>
-                    <p><span className='font-semibold text-white'>Lead Dev:</span> Jane Doe</p>
-                    <p><span className='font-semibold text-white'>Designer:</span> John Smith</p>
-                    <p><span className='font-semibold text-white'>AI Specialist:</span> Alex Carter</p>
-                  </div>
-
-                  <div className='w-full border-t border-gray-600 my-4'></div>
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Milestones</h4>
-                  <div className='text-base sm:text-lg text-white/80 space-y-2'>
-                    <p>Q1 2024: Beta Launch</p>
-                    <p>Q3 2024: 100+ Users</p>
-                    <p>Q4 2024: Full Release</p>
-                  </div>
+                  <div className='w-full border-t border-gray-600 my-4' />
                 </div>
 
-                <div className='w-full sm:w-[60%]'>
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Problem</h4>
-                  <p className='text-base sm:text-lg text-white/70 mb-4'>{currentSlide.problem}</p>
-                  <div className='w-full border-t border-gray-600 my-4'></div>
-
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Solution</h4>
-                  <p className='text-base sm:text-lg text-white/70 mb-4'>{currentSlide.solution}</p>
-                  <div className='w-full border-t border-gray-600 my-4'></div>
-
-                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Summary</h4>
-                  <p className='text-base sm:text-lg text-white/70 mb-4'>{currentSlide.summary}</p>
+                <div>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
+                    Problem
+                  </h4>
+                  <p className='text-base sm:text-lg text-white/70 mb-4'>
+                    {currentSlide.problem}
+                  </p>
+                  <div className='w-full border-t border-gray-600 my-4' />
                 </div>
-              </div>
 
-              <div className='w-full mt-6'>
-                <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Assets</h4>
-                <img
-                  src={currentSlide.image}
-                  alt={currentSlide.alt}
-                  className='w-full h-auto rounded-lg object-contain mb-4'
-                />
-                {currentSlide.video && (
-                  <>
-                    <div className='w-full border-t border-gray-600 my-4'></div>
-                    <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Video</h4>
-                    <iframe
-                      src='https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/preview'
-                      width='100%'
-                      height='480'
-                      allow='autoplay'
-                      className='w-full rounded-lg'
-                    ></iframe>
-                  </>
-                )}
-                {currentSlide.additionalImages && currentSlide.additionalImages.length > 0 && (
-                  <>
-                    <div className='w-full border-t border-gray-600 my-4'></div>
-                    <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>Additional Images</h4>
-                    <div className='grid grid-cols-2 gap-4'>
-                      {currentSlide.additionalImages.map((img, index) => (
-                        <div key={index} className='flex flex-col items-center'>
-                          <img
-                            src={img}
-                            alt={`Additional image ${index + 1}`}
-                            className='w-full h-[600px] rounded-lg object-contain'
-                          />
-                          <p className='text-white mt-2'>{index + 1}.</p>
+                <div>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
+                    Solution
+                  </h4>
+                  <p className='text-base sm:text-lg text-white/70 mb-4'>
+                    {currentSlide.solution}
+                  </p>
+                  <div className='w-full border-t border-gray-600 my-4' />
+                </div>
+
+                <div>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
+                    Summary
+                  </h4>
+                  <p className='text-base sm:text-lg text-white/70 mb-4'>
+                    {currentSlide.summary}
+                  </p>
+                  <div className='w-full border-t border-gray-600 my-4' />
+                </div>
+
+                <div>
+                  <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
+                    Assets
+                  </h4>
+                  <img
+                    src={currentSlide.image}
+                    alt={currentSlide.alt}
+                    className='w-full h-auto rounded-lg object-contain mb-4'
+                  />
+                  {currentSlide.video && (
+                    <>
+                      <div className='w-full border-t border-gray-600 my-4' />
+                      <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
+                        Video
+                      </h4>
+                      <iframe
+                        src='https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/preview'
+                        width='100%'
+                        height='480'
+                        allow='autoplay'
+                        className='w-full rounded-lg'
+                      />
+                    </>
+                  )}
+                  {currentSlide.additionalImages &&
+                    currentSlide.additionalImages.length > 0 && (
+                      <>
+                        <div className='w-full border-t border-gray-600 my-4' />
+                        <h4 className='text-lg sm:text-xl font-semibold text-white mb-2'>
+                          Additional Images
+                        </h4>
+                        <div className='grid grid-cols-1 gap-4'>
+                          {currentSlide.additionalImages.map((img, index) => (
+                            <div
+                              key={index}
+                              className='flex flex-col items-center'
+                            >
+                              <img
+                                src={img}
+                                alt={`Additional image ${index + 1}`}
+                                className='w-full h-[600px] rounded-lg object-contain'
+                              />
+                              <p className='text-white mt-2'>{index + 1}.</p>
+                            </div>
+                          ))}
+                          <button
+                            onClick={handleDownload}
+                            className='bg-white hover:bg-white/50 text-black cursor-pointer font-bold py-2 px-4 rounded transition duration-300'
+                          >
+                            Example Invoice
+                          </button>
                         </div>
-                      ))}
-                    </div>
-                  </>
-                )}
+                      </>
+                    )}
+                </div>
               </div>
             </motion.div>
           </motion.div>

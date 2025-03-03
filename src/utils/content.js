@@ -23,12 +23,14 @@ export const faqs = [
       'We design AI solutions that seamlessly integrate with cloud infrastructures (Azure, AWS, Google Cloud), enterprise databases, APIs, and legacy systems—ensuring scalability, security, and compliance at every level.',
   },
   {
-    question: 'Does Genfox.AI build custom AI models or fine-tune existing ones?',
+    question:
+      'Does Genfox.AI build custom AI models or fine-tune existing ones?',
     answer:
       'Yes, we develop custom AI models, optimize large language models (LLMs), and fine-tune enterprise-specific AI systems for improved performance, accuracy, and cost efficiency.',
   },
   {
-    question: 'How does Genfox.AI ensure AI solutions align with our business goals?',
+    question:
+      'How does Genfox.AI ensure AI solutions align with our business goals?',
     answer:
       'We take a strategy-first approach, aligning AI implementation with your business objectives, industry challenges, and operational needs. Our AI architectures are designed for scalability, compliance, and cost efficiency, ensuring that every AI investment delivers optimized performance while minimizing operational expenses.',
   },
@@ -43,12 +45,14 @@ export const faqs = [
       'Yes. We develop multi-agent AI frameworks that enable collaborative, autonomous decision-making across various AI agents. This enhances workflow automation, complex problem-solving, and decentralized AI coordination for enterprise applications.',
   },
   {
-    question: 'How does Genfox.AI implement real-time AI and autonomous agents?',
+    question:
+      'How does Genfox.AI implement real-time AI and autonomous agents?',
     answer:
       'We build self-learning AI agents, real-time inference systems, and autonomous decision-making frameworks that optimize workflows, enhance predictive analytics, and improve operational efficiency.',
   },
   {
-    question: 'How can enterprises collaborate with Genfox.AI for AI transformation?',
+    question:
+      'How can enterprises collaborate with Genfox.AI for AI transformation?',
     answer:
       'We offer AI strategy consulting, long-term innovation partnerships, and enterprise-wide AI transformation solutions to help businesses leverage AI for efficiency, scalability, and competitive advantage.',
   },
@@ -58,9 +62,8 @@ export const teamMembers = [
   {
     id: 1,
     name: 'Shahnawaz Khan',
-    title: 'CEO',
-    image:
-      '/UserProfilepitcure.jpg',
+    // title: 'CEO',
+    image: '/UserProfilepitcure.jpg',
   },
   // {
   //   id: 2,
@@ -85,7 +88,7 @@ export const svgs = [
       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" style="fill: #FFFFFF">
         <path d="M46.707,12.293l-8-8c-0.391-0.391-1.023-0.391-1.414,0L25,16.586L12.707,4.293c-0.391-0.391-1.023-0.391-1.414,0l-8,8 C3.105,12.48,3,12.735,3,13v23c0,0.265,0.105,0.52,0.293,0.707l10,10c0.286,0.287,0.718,0.372,1.09,0.217 C14.757,46.769,15,46.404,15,46V25.414l9.293,9.293C24.488,34.902,24.744,35,25,35s0.512-0.098,0.707-0.293L35,25.414V46 c0,0.404,0.243,0.769,0.617,0.924C35.741,46.975,35.871,47,36,47c0.26,0,0.516-0.102,0.707-0.293l10-10 C46.895,36.52,47,36.265,47,36V13C47,12.735,46.895,12.48,46.707,12.293z" />
       </svg>
-    `
+    `,
   },
   {
     id: 'svg2',
@@ -97,7 +100,7 @@ export const svgs = [
           </g>
         </g>
       </svg>
-    `
+    `,
   },
   {
     id: 'svg3',
@@ -105,7 +108,7 @@ export const svgs = [
       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32" style="fill: #FFFFFF">
         <path d="M 22.050781 9.9492188 C 21.525781 9.9242187 21.099609 10 21.099609 10 L 25.099609 16 L 21.099609 21.900391 C 21.099609 21.900391 22.899219 22.200391 23.699219 21.400391 C 24.199219 20.900391 24.499219 20.4 26.199219 18 C 26.499219 17.5 26.800781 18 26.800781 18 C 28.300781 20 28.700391 20.800391 29.400391 21.400391 C 30.300391 22.100391 32 21.900391 32 21.900391 L 28 16 L 31.900391 10 C 31.900391 10 30.200391 9.7 29.400391 10.5 C 28.800391 11.1 28.200781 11.9 26.800781 14 C 26.800781 14 26.499219 14.5 26.199219 14 C 24.799219 12 24.199609 11.1 23.599609 10.5 C 23.199609 10.1 22.575781 9.9742188 22.050781 9.9492188 z M 0.41992188 9.9902344 C 0.27851562 9.9835938 0.1375 9.9875 0 10 L 3.1992188 22 C 3.1992187 22 4.1992187 22.000781 4.6992188 21.800781 C 5.3992187 21.500781 5.6996094 21.199609 6.0996094 19.599609 C 6.4996094 18.199609 7.4996094 13.899609 7.5996094 13.599609 C 7.7996094 12.899609 8.1007813 12.899609 8.3007812 13.599609 C 8.4007812 13.899609 9.4007812 18.099609 9.8007812 19.599609 C 10.200781 21.199609 10.499219 21.500781 11.199219 21.800781 C 11.799219 22.100781 12.800781 22 12.800781 22 L 16 10 C 14.9 9.9 13.6 10.499219 13.5 11.699219 L 11.800781 18.099609 L 10.400391 12.900391 C 10.100391 11.400391 9.3996094 10.599609 8.0996094 10.599609 C 6.7996094 10.599609 6.2007813 11.300391 5.8007812 12.900391 L 4.4003906 18.099609 L 2.6992188 11.699219 C 2.4367187 10.561719 1.4097656 10.036719 0.41992188 9.9902344 z M 19.599609 10 C 19.599609 10 18.800781 9.9992188 18.300781 10.199219 C 17.700781 10.499219 17.5 11.099609 17.5 12.599609 C 17.5 12.599609 17.800781 12.299609 18.300781 12.099609 C 19.700781 11.599609 19.599609 10.6 19.599609 10 z M 19.5 12 L 19.5 12.076172 C 19.524326 12.032657 19.530125 12 19.5 12 z M 19.5 12.076172 C 19.443576 12.177106 19.249766 12.36025 18.900391 12.5 C 18.600391 12.7 18.3 12.800391 18 12.900391 C 17.3 13.200391 17.400391 13.599609 17.400391 14.599609 L 17.400391 22 C 17.400391 22 18.199219 22.100781 18.699219 21.800781 C 19.399219 21.500781 19.5 21.099609 19.5 19.599609 L 19.5 12.076172 z" />
       </svg>
-    `
+    `,
   },
   {
     id: 'svg4',
@@ -117,78 +120,74 @@ export const svgs = [
           </g>
         </g>
       </svg>
-    `
-  }
+    `,
+  },
 ];
 
 export const services = [
   {
-    title: "Enterprise Leaders",
+    title: 'Enterprise Leaders',
     description:
-      "We architect and optimize AI ecosystems for global enterprises, ensuring seamless automation, operational efficiency, and data-driven decision-making at scale. Our solutions enhance productivity, minimize risk, and drive measurable business impact.",
-    imageSrc:
-      "/Enterprise-Leaders-min.jpg",
-    number: "1",
+      'We architect and optimize AI ecosystems for global enterprises, ensuring seamless automation, operational efficiency, and data-driven decision-making at scale. Our solutions enhance productivity, minimize risk, and drive measurable business impact.',
+    imageSrc: '/Enterprise-Leaders-min.jpg',
+    number: '1',
   },
   {
-    title: "Scaling AI Products",
+    title: 'Scaling AI Products',
     description:
-      "For companies looking to refine and scale their AI-driven products, we deliver advanced model optimization, seamless integrations, and performance enhancements that unlock new levels of efficiency and user engagement.",
-    imageSrc:
-      "/Scaling-AI-Products1-min.jpg",
-    number: "2",
+      'For companies looking to refine and scale their AI-driven products, we deliver advanced model optimization, seamless integrations, and performance enhancements that unlock new levels of efficiency and user engagement.',
+    imageSrc: '/Scaling-AI-Products1-min.jpg',
+    number: '2',
   },
   {
-    title: "AI-First Innovators",
+    title: 'AI-First Innovators',
     description:
-      "From concept to deployment, we help visionary leaders build transformative AI solutions. Our expertise in AI strategy, infrastructure, and execution ensures a competitive edge in a rapidly evolving landscape.",
-    imageSrc:
-      "/AI-First-Innovators-min.jpg",
-    number: "3",
+      'From concept to deployment, we help visionary leaders build transformative AI solutions. Our expertise in AI strategy, infrastructure, and execution ensures a competitive edge in a rapidly evolving landscape.',
+    imageSrc: '/AI-First-Innovators-min.jpg',
+    number: '3',
   },
 ];
 
 export const slideData = [
-    {
-      projectName: 'Kinder Bench Automation System',
-      usecase:
-        'Streamlining Kindergarten Operations with AI-Powered Automation',
-      problem:
-        'Managing a kindergarten involves numerous repetitive tasks such as tracking child attendance, coordinating meal schedules, planning daily activities, and maintaining consistent communication with parents. These tasks, while essential, demanded significant time and effort from staff members, pulling their focus away from direct child engagement and care. Manual processes also led to errors, delays, and inconsistencies, which frustrated both staff and parents. Over time, this inefficiency strained resources, reduced operational effectiveness, and limited the ability to scale services without hiring additional personnel.',
-      solution:
-        'The Kinder Bench Automation System leverages advanced AI technology to automate key operational tasks. Attendance tracking is now handled through facial recognition software integrated with a secure check-in system, eliminating manual roll calls. Meal planning is optimized using an AI algorithm that accounts for dietary restrictions, nutritional needs, and inventory levels, generating schedules in seconds. Parent communication is streamlined via an automated messaging platform that sends real-time updates, reminders, and reports. Daily activity planning is enhanced with AI-driven suggestions tailored to educational goals and child preferences, reducing preparation time. This comprehensive solution integrates seamlessly into existing workflows, requiring minimal training.',
-      summary:
-        'By implementing the Kinder Bench Automation System, the kindergarten achieved a remarkable transformation in efficiency and staff satisfaction. The automation of repetitive tasks resulted in an estimated 48% reduction in time spent on administrative duties, allowing staff to dedicate more energy to fostering child development and engagement. Parents reported higher satisfaction due to improved communication and transparency, while the organization saved on operational costs by reducing manual errors and optimizing resource use. This AI-driven approach not only addressed immediate pain points but also positioned the kindergarten as a forward-thinking institution, capable of scaling operations without compromising quality.',
-      image: '/test1.png',
-      video:
-        'https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/view?usp=sharing',
-      alt: 'donna',
-    },
-    {
-      projectName: 'Kinder Bench Parent Portal',
-      usecase: 'Enhancing Parent Engagement with a Digital Interface',
-      problem:
-        'Kindergarten staff struggled to keep parents consistently informed about their children’s progress, daily activities, and important announcements. Traditional methods like paper notes, sporadic emails, and phone calls were time-consuming and often ineffective, leading to miscommunication and frustration. Parents frequently felt disconnected from their child’s day-to-day experience, and staff wasted valuable time addressing individual inquiries that could have been preemptively resolved with better tools. This lack of a centralized communication hub also made it difficult to share multimedia updates or emergency alerts efficiently.',
-      solution:
-        'The Kinder Bench Parent Portal is a custom-built digital platform powered by AI and cloud technology. It provides parents with a user-friendly interface accessible via web and mobile devices, offering real-time access to their child’s attendance records, meal logs, activity schedules, and developmental milestones. The portal uses AI to generate personalized progress reports and predictive insights based on child data, helping parents stay informed and engaged. Automated notifications alert parents to upcoming events, payment deadlines, or urgent updates, while a secure messaging feature allows direct communication with staff. The system also supports multimedia uploads, enabling teachers to share photos and videos of classroom moments instantly.',
-      summary:
-        'The deployment of the Kinder Bench Parent Portal revolutionized the relationship between the kindergarten and its parent community. By centralizing communication and leveraging AI for personalized insights, the portal reduced staff workload related to parent inquiries by approximately 40%, freeing them to focus on teaching and caregiving. Parents gained unprecedented visibility into their child’s kindergarten experience, fostering trust and engagement. The system’s ability to deliver instant updates and multimedia content strengthened community ties, while its scalability ensured it could grow with the organization. Ultimately, this solution bridged the gap between home and school, creating a more connected and informed ecosystem.',
-      image: '/test2.png',
-      video: '',
-      alt: 'commit',
-    },
-    {
-      projectName: 'Kinder Bench Parent Portal',
-      usecase: 'Enhancing Parent Engagement with a Digital Interface',
-      problem:
-        'Kindergarten staff struggled to keep parents consistently informed about their children’s progress, daily activities, and important announcements. Traditional methods like paper notes, sporadic emails, and phone calls were time-consuming and often ineffective, leading to miscommunication and frustration. Parents frequently felt disconnected from their child’s day-to-day experience, and staff wasted valuable time addressing individual inquiries that could have been preemptively resolved with better tools. This lack of a centralized communication hub also made it difficult to share multimedia updates or emergency alerts efficiently.',
-      solution:
-        'The Kinder Bench Parent Portal is a custom-built digital platform powered by AI and cloud technology. It provides parents with a user-friendly interface accessible via web and mobile devices, offering real-time access to their child’s attendance records, meal logs, activity schedules, and developmental milestones. The portal uses AI to generate personalized progress reports and predictive insights based on child data, helping parents stay informed and engaged. Automated notifications alert parents to upcoming events, payment deadlines, or urgent updates, while a secure messaging feature allows direct communication with staff. The system also supports multimedia uploads, enabling teachers to share photos and videos of classroom moments instantly.',
-      summary:
-        'The deployment of the Kinder Bench Parent Portal revolutionized the relationship between the kindergarten and its parent community. By centralizing communication and leveraging AI for personalized insights, the portal reduced staff workload related to parent inquiries by approximately 40%, freeing them to focus on teaching and caregiving. Parents gained unprecedented visibility into their child’s kindergarten experience, fostering trust and engagement. The system’s ability to deliver instant updates and multimedia content strengthened community ties, while its scalability ensured it could grow with the organization. Ultimately, this solution bridged the gap between home and school, creating a more connected and informed ecosystem.',
-      image: '/Frame 2.png',
-      video: '',
-      alt: 'whatapp',
-      additionalImages: ['/one.png', '/two.png', '/three.png', '/four.png'],
-    },
-  ];
+  {
+    projectName: 'Kinder Bench Automation System',
+    usecase: 'Streamlining Kindergarten Operations with AI-Powered Automation',
+    problem:
+      'Managing a kindergarten involves numerous repetitive tasks such as tracking child attendance, coordinating meal schedules, planning daily activities, and maintaining consistent communication with parents. These responsibilities demanded significant time and effort from staff, pulling their focus away from meaningful child engagement and educational priorities. Manual processes often led to errors like miscounting attendance or overlooking dietary restrictions, causing delays in daily operations and inconsistencies in record-keeping. This inefficiency frustrated both staff, who felt overwhelmed by administrative burdens, and parents, who received delayed or inaccurate updates about their children. The lack of streamlined systems strained the kindergarten’s limited resources, making it difficult to allocate staff effectively or respond to unexpected challenges. Additionally, the reliance on paper-based methods and outdated tools hindered scalability, preventing the institution from growing or adapting to increasing enrollment and parental expectations.',
+    solution:
+      'The Kinder Bench Automation System leverages advanced AI technology to automate key operational tasks, transforming how kindergartens function daily. Facial recognition technology accurately tracks attendance in real time, eliminating the need for manual roll calls and reducing errors significantly. AI algorithms optimize meal planning by analyzing children’s dietary needs, allergies, and available inventory, ensuring every child receives appropriate nutrition without waste or oversight. Automated messaging systems deliver timely updates to parents about their child’s day, including attendance confirmations and activity highlights, fostering trust and transparency. Additionally, AI-driven suggestions analyze educational goals and past activities to recommend engaging, age-appropriate plans, easing the burden on staff to brainstorm constantly. The system integrates seamlessly into existing workflows with an intuitive interface that requires minimal training, allowing staff to adopt it quickly. It also includes safeguards to ensure data privacy and compliance with regulations, making it a secure choice for modern kindergartens.',
+    summary:
+      'The system reduced administrative time by 48%, allowing staff to focus on child development. Parents reported higher satisfaction due to better communication, and operational costs dropped by reducing errors. It positioned the kindergarten as a scalable, innovative institution.',
+    image: '/test1.png',
+    video:
+      'https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/view?usp=sharing',
+    alt: 'donna',
+  },
+  {
+    projectName: 'Kinder Bench Parent Portal',
+    usecase: 'Enhancing Parent Engagement with a Digital Interface',
+    problem:
+      'Staff faced persistent challenges in keeping parents informed about their children’s progress, daily activities, and important announcements, relying heavily on outdated methods like paper notes, scattered emails, and time-consuming phone calls. These inefficient communication channels frequently led to miscommunication, such as parents missing critical updates or receiving conflicting information about schedules. The process frustrated parents, who felt disconnected from their child’s kindergarten experience, and left staff overwhelmed by a flood of follow-up inquiries that could have been avoided with better tools. The lack of a centralized system meant that staff spent hours compiling updates or addressing individual parental concerns, detracting from their ability to focus on classroom responsibilities. This inefficiency eroded trust between the kindergarten and families, as parents grew increasingly dissatisfied with the lack of transparency and responsiveness. Moreover, the absence of a scalable solution limited the institution’s ability to manage growing numbers of families or adapt to their evolving needs.',
+    solution:
+      'The Kinder Bench Parent Portal is an innovative, AI-powered platform designed to bridge the communication gap between staff and parents, offering a robust digital interface accessible via both web and mobile devices. It provides real-time access to critical information such as attendance records, detailed meal logs, daily schedules, and developmental milestones, empowering parents to stay closely connected to their child’s day. The AI component generates personalized reports tailored to each child’s activities and progress, giving parents deeper insights without requiring staff intervention. Automated notifications keep families informed of sudden changes, upcoming events, or emergencies, ensuring they’re never caught off guard. The portal also supports multimedia updates, allowing staff to share photos, videos, or notes about special moments, enhancing the emotional bond between home and school. With an easy-to-navigate design, it fosters direct, two-way communication, enabling parents to send questions or feedback effortlessly. Built with scalability in mind, the platform adapts to increasing users and integrates security features to protect sensitive data, making it a reliable long-term solution.',
+    summary:
+      'The portal cut staff inquiry workload by 40%, improved parent trust and engagement with instant updates, and strengthened community ties. Its scalability ensures growth potential, bridging the home-school gap effectively.',
+    image: '/test2.png',
+    video: '',
+    alt: 'commit',
+  },
+  {
+    projectName: 'Kinder Bench Parent Portal',
+    usecase: 'Enhancing Parent Engagement with a Digital Interface',
+    problem:
+      'Staff struggled relentlessly to keep parents informed about their children’s progress, activities, and announcements, relying on inefficient tools like paper notes, sporadic emails, and labor-intensive phone calls that often failed to deliver timely information. This disjointed approach frequently resulted in miscommunication, such as parents missing pickup time changes or not knowing about classroom events, leading to confusion and dissatisfaction. The constant need to clarify updates or respond to frustrated parents overwhelmed staff, pulling them away from their primary role of nurturing and educating the children. Without a unified system, tracking who received what information became a logistical nightmare, amplifying errors and inconsistencies. Parents felt increasingly disconnected from their child’s daycare life, which weakened their confidence in the kindergarten’s operations. The absence of a modern, efficient communication framework also posed a barrier to scalability, limiting the institution’s capacity to serve more families or meet rising expectations for engagement and transparency.',
+    solution:
+      'The Kinder Bench Parent Portal is a cutting-edge, AI-enhanced platform that revolutionizes how kindergartens connect with families, offering a seamless digital experience through web and mobile access. It provides parents with real-time visibility into essential details like attendance, meal logs, schedules, and developmental milestones, ensuring they’re always in the loop. The AI-driven system crafts personalized reports that highlight individual achievements and daily experiences, saving staff time while giving parents meaningful updates tailored to their child. Automated notifications deliver instant alerts about schedule shifts, health reminders, or special announcements, keeping communication proactive and consistent. The platform also enables multimedia sharing, letting staff upload photos, videos, or quick notes about classroom highlights, which deepens parental involvement and satisfaction. Designed for ease of use, it encourages direct staff-parent interaction through built-in messaging, reducing misunderstandings. With robust scalability and top-tier data security, the portal adapts to growing needs while safeguarding privacy, making it an indispensable tool for modern early education settings.',
+    summary:
+      'The portal cut staff inquiry workload by 40%, improved parent trust and engagement with instant updates, and strengthened community ties. Its scalability ensures growth potential, bridging the home-school gap effectively.',
+    image: '/Frame 1.png',
+    video: '',
+    alt: 'whatapp',
+    additionalImages: ['/one.png', '/three.png', '/four.png', '/two.png', ,],
+  },
+];

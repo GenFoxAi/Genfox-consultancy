@@ -13,7 +13,7 @@ const Footer = () => {
             <a href='#' className='hover:text-white'>
             </a>
             <span className='mx-1'>|</span>
-            <a href='#' className='hover:text-white'>
+            <a href='https://www.linkedin.com/company/genfox-ai/' target="_blank" className='hover:text-white'>
               LinkedIn
               
             </a>
