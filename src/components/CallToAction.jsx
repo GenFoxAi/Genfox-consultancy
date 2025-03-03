@@ -140,13 +140,13 @@ const CallToAction = ({ isOpen, setIsOpen }) => {
                       />
                     </div>
                   </div>
-{/* 
+
                   <div className="mb-4">
                     <label
                       htmlFor="services"
                       className="block text-sm font-medium mb-1 text-black"
                     >
-                      What services are you interested in? *
+                      What services are you interested in?
                     </label>
                     <select
                       id="services"
@@ -168,7 +168,7 @@ const CallToAction = ({ isOpen, setIsOpen }) => {
                       </option>
                       <option value="AI-Powered Automation">AI-Powered Automation</option>
                     </select>
-                  </div> */}
+                  </div> 
 
                   <div className="mb-4">
                     <label

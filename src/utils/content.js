@@ -70,7 +70,7 @@ export const teamMembers = [
     name: 'Khizer Hussain',
     // title: 'CTO',
     image:
-      'https://cdnb.artstation.com/p/assets/images/images/084/124/305/large/matthew-blank-profile-photo-2-1.jpg?1737590059',
+      '/pfp2.png',
   },
   {
     id: 3,
@@ -88,7 +88,7 @@ export const teamMembers = [
   },
   {
     id: 5,
-    name: 'Krishna ',
+    name: 'Krishna Saxena',
     // title: 'Head of Data  Engineering',
     image:
       'https://cdnb.artstation.com/p/assets/images/images/084/124/305/large/matthew-blank-profile-photo-2-1.jpg?1737590059',
@@ -173,7 +173,7 @@ export const slideData = [
       'In a fast-paced world, individuals and professionals struggle with managing their daily tasks, finances, and health efficiently. Traditional productivity apps require constant switching, manual inputs, and lack seamless integration, making it difficult to stay organized and proactive.',
     solutionheading: 'A Unified AI-Powered Assistant',
     solution:
-      'GenFox AI eliminates app-switching by acting as a centralized AI assistant that integrates with existing tools like calendars, finance trackers, and fitness apps. Through a Generative UI (GUI) on WhatsApp, users can interact via conversational AI to schedule meetings, track expenses, receive personalized recommendations, and automate tasks—enhancing productivity effortlessly.',
+      'GenFox AI eliminates app-switching by acting as a centralized AI assistant that integrates with existing tools like calendars, finance trackers, and fitness apps. Through a conversational AI interface on WhatsApp, users can interact naturally to schedule meetings, track expenses, receive personalized recommendations, and automate tasks—enhancing productivity effortlessly.',
     summaryheading: 'AI That Adapts to You',
     summary:
       'GenFox AI redefines digital assistance by combining natural language processing, predictive automation, and seamless integrations into a single AI-driven experience. Whether it’s budgeting, fitness tracking, career growth, or daily task management, GenFox adapts to each users unique needs, making AI more accessible and intuitive for individuals and professionals alike.',
@@ -220,7 +220,7 @@ export const slideData = [
       'Enterprise payroll systems often struggle with disjointed interfaces, manual approvals, and high-volume employee queries. Employees face delays in accessing payslips, tracking deductions, and resolving payroll issues, while HR teams are burdened with repetitive inquiries and approval bottlenecks. This lack of automation impacts operational efficiency, employee satisfaction, and compliance readiness.',
     solutionheading: 'AI-Powered Self-Service with Embedded Workflows',
     solution:
-      'GenFox AI eliminates app-switching by acting as a centralized AI assistant that integrates with existing tools like calendars, finance trackers, and fitness apps. Through a conversational AI interface on WhatsApp, users can interact naturally to schedule meetings, track expenses, receive personalized recommendations, and automate tasks—enhancing productivity effortlessly.',
+      'Our Conversational AI-driven ESS integrates with enterprise payroll systems, enabling employees to retrieve payslips, process approvals, and execute payroll-related actions within a unified AI-powered interface. Generative UI dynamically renders interactive widgets, allowing users to approve salary revisions, manage tax documents, and submit reimbursement claims—all within a conversational flow. The AI acts as a proactive assistant, anticipating user needs, ensuring policy compliance, and delivering insights on salary structures, deductions, and benefits.',
     summaryheading: 'Scalable, Intelligent & Secure Payroll Automation',
     summary:
       'This solution eliminates navigation complexities, enabling employees to complete payroll tasks in seconds through AI-driven workflows. By automating request handling, approvals, and document access, enterprises reduce HR workload, improve employee productivity, and enhance governance. API-based authentication ensures secure, real-time access to payroll data, making it a scalable solution for global enterprises.',
