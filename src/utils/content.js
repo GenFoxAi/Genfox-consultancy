@@ -214,60 +214,95 @@ export const slideData = [
   },
   {
     projectName:
-    'AI Payroll ESS: Automating Payroll & Approvals with Conversational AI & Generative UI',
-  usecase: 'Empowering Enterprises with AI-driven Payroll Self-Service',
-  usecasedesc:
-    'In large-scale enterprises, payroll operations are complex, time-sensitive, and resource-intensive. Our AI-powered Employee Self-Service (ESS) solution redefines payroll management by integrating Conversational AI (CAI) with Generative UI (GUI), eliminating manual intervention and streamlining approvals. With intelligent automation, employees and HR teams experience seamless, real-time payroll interactions, reducing inefficiencies while ensuring compliance and security at scale.',
-  probelmheading: 'Fragmented Payroll Processes & High Operational Overhead',
-  problem:
-    'Enterprise payroll systems often struggle with disjointed interfaces, manual approvals, and high-volume employee queries. Employees face delays in accessing payslips, tracking deductions, and resolving payroll issues, while HR teams are burdened with repetitive inquiries and approval bottlenecks. This lack of automation impacts operational efficiency, employee satisfaction, and compliance readiness.',
-  solutionheading: 'AI-Powered Self-Service with Embedded Workflows',
-  solution:
-    'Our Conversational AI-driven ESS integrates with enterprise payroll systems, enabling employees to retrieve payslips, process approvals, and execute payroll-related actions within a unified AI-powered interface. Generative UI dynamically renders interactive widgets, allowing users to approve salary revisions, manage tax documents, and submit reimbursement claims—all within a conversational flow. The AI acts as a proactive assistant, anticipating user needs, ensuring policy compliance, and delivering insights on salary structures, deductions, and benefits.',
-  summaryheading: 'Scalable, Intelligent & Secure Payroll Automation',
-  summary:
-    'This solution eliminates navigation complexities, enabling employees to complete payroll tasks in seconds through AI-driven workflows. By automating request handling, approvals, and document access, enterprises reduce HR workload, improve employee productivity, and enhance governance. API-based authentication ensures secure, real-time access to payroll data, making it a scalable solution for global enterprises.',
+      'GenFox AI: The Future of AI-Powered Personal Assistance',
+    usecase: 'AI-Powered Personal Assistance for Efficiency & Productivity',
+    usecasedesc:
+      'GenFox AI is an intelligent virtual assistant designed to simplify personal and professional life by integrating AI-powered automation within a single WhatsApp interface. From finance tracking to productivity management, GenFox enhances efficiency through conversational AI and smart integrations.',
+    probelmheading: 'Fragmented Tools & Inefficient Task Management',
+    problem:
+      'In a fast-paced world, individuals and professionals struggle with managing their daily tasks, finances, and health efficiently. Traditional productivity apps require constant switching, manual inputs, and lack seamless integration, making it difficult to stay organized and proactive.',
+    solutionheading: 'A Unified AI-Powered Assistan',
+    solution:
+      'GenFox AI eliminates app-switching by acting as a centralized AI assistant that integrates with existing tools like calendars, finance trackers, and fitness apps. Through a Generative UI (GUI) on WhatsApp, users can interact via conversational AI to schedule meetings, track expenses, receive personalized recommendations, and automate tasks—enhancing productivity effortlessly.',
+      summaryheading:'AI That Adapts to You',
+    summary:
+      'GenFox AI redefines digital assistance by combining natural language processing, predictive automation, and seamless integrations into a single AI-driven experience. Whether it’s budgeting, fitness tracking, career growth, or daily task management, GenFox adapts to each users unique needs, making AI more accessible and intuitive for individuals and professionals alike.',
 
-  keyFeatures: [
-    {
-      title: 'Conversational AI for Payroll',
-      description:
-        'Employees engage via natural language queries to retrieve payslips, track earnings, and resolve payroll concerns instantly.',
-    },
-    {
-      title: 'Automated Approvals & Workflows',
-      description:
-        'AI-driven widgets for salary approvals, leave adjustments, and tax declarations, reducing manual HR interventions.',
-    },
-    {
-      title: 'Enterprise-Grade Security',
-      description:
-        'API-based authentication ensures compliance with enterprise security policies, safeguarding payroll data.',
-    },
-    {
-      title: 'Seamless System Integration',
-      description:
-        'Works with SAP, Workday, Oracle, and other enterprise HRMS platforms for real-time payroll processing.',
-    },
-    {
-      title: 'Multi-Language & Customization',
-      description:
-        'Supports English, Arabic, and enterprise-specific policy configurations for a personalized experience.',
-    },
-  ],
+      keyFeatures: [
+        {
+          title: 'Conversational AI Interface',
+          description:
+            'A WhatsApp-based AI assistant for intuitive, real-time interactions.',
+        },
+        {
+          title: 'Multi-Functionality',
+          description:
+            'AI-driven financial tracking, health monitoring, productivity management, and learning recommendations.',
+        },
+        {
+          title: 'Seamless Integrations',
+          description:
+            'Connects with tools like Google Calendar, Apple Health, Gmail, Notion, and more.',
+        },
+        {
+          title: 'Smart Automation',
+          description:
+            'AI-powered reminders, scheduling, and proactive suggestions to optimize time management.',
+        },
+        {
+          title: 'Privacy & Security',
+          description:
+            'User data remains private, ensuring a secure and personalized experience.',
+        },
+      ],
+      
     image: '/Usecase 2.jpg',
     video: '',
     alt: 'commit',
   },
   {
-    projectName: 'Kinder Bench Parent Portal',
-    usecase: 'Enhancing Parent Engagement with a Digital Interface',
+    projectName:
+      'AI Payroll ESS: Automating Payroll & Approvals with Conversational AI & Generative UI',
+    usecase: 'Empowering Enterprises with AI-driven Payroll Self-Service',
+    usecasedesc:
+      'In large-scale enterprises, payroll operations are complex, time-sensitive, and resource-intensive. Our AI-powered Employee Self-Service (ESS) solution redefines payroll management by integrating Conversational AI (CAI) with Generative UI (GUI), eliminating manual intervention and streamlining approvals. With intelligent automation, employees and HR teams experience seamless, real-time payroll interactions, reducing inefficiencies while ensuring compliance and security at scale.',
+    probelmheading: 'Fragmented Payroll Processes & High Operational Overhead',
     problem:
-      'Staff struggled relentlessly to keep parents informed about their children’s progress, activities, and announcements, relying on inefficient tools like paper notes, sporadic emails, and labor-intensive phone calls that often failed to deliver timely information. This disjointed approach frequently resulted in miscommunication, such as parents missing pickup time changes or not knowing about classroom events, leading to confusion and dissatisfaction. The constant need to clarify updates or respond to frustrated parents overwhelmed staff, pulling them away from their primary role of nurturing and educating the children. Without a unified system, tracking who received what information became a logistical nightmare, amplifying errors and inconsistencies. Parents felt increasingly disconnected from their child’s daycare life, which weakened their confidence in the kindergarten’s operations. The absence of a modern, efficient communication framework also posed a barrier to scalability, limiting the institution’s capacity to serve more families or meet rising expectations for engagement and transparency.',
+      'Enterprise payroll systems often struggle with disjointed interfaces, manual approvals, and high-volume employee queries. Employees face delays in accessing payslips, tracking deductions, and resolving payroll issues, while HR teams are burdened with repetitive inquiries and approval bottlenecks. This lack of automation impacts operational efficiency, employee satisfaction, and compliance readiness.',
+    solutionheading: 'AI-Powered Self-Service with Embedded Workflows',
     solution:
-      'The Kinder Bench Parent Portal is a cutting-edge, AI-enhanced platform that revolutionizes how kindergartens connect with families, offering a seamless digital experience through web and mobile access. It provides parents with real-time visibility into essential details like attendance, meal logs, schedules, and developmental milestones, ensuring they’re always in the loop. The AI-driven system crafts personalized reports that highlight individual achievements and daily experiences, saving staff time while giving parents meaningful updates tailored to their child. Automated notifications deliver instant alerts about schedule shifts, health reminders, or special announcements, keeping communication proactive and consistent. The platform also enables multimedia sharing, letting staff upload photos, videos, or quick notes about classroom highlights, which deepens parental involvement and satisfaction. Designed for ease of use, it encourages direct staff-parent interaction through built-in messaging, reducing misunderstandings. With robust scalability and top-tier data security, the portal adapts to growing needs while safeguarding privacy, making it an indispensable tool for modern early education settings.',
+      'Our Conversational AI-driven ESS integrates with enterprise payroll systems, enabling employees to retrieve payslips, process approvals, and execute payroll-related actions within a unified AI-powered interface. Generative UI dynamically renders interactive widgets, allowing users to approve salary revisions, manage tax documents, and submit reimbursement claims—all within a conversational flow. The AI acts as a proactive assistant, anticipating user needs, ensuring policy compliance, and delivering insights on salary structures, deductions, and benefits.',
+    summaryheading: 'Scalable, Intelligent & Secure Payroll Automation',
     summary:
-      'The portal cut staff inquiry workload by 40%, improved parent trust and engagement with instant updates, and strengthened community ties. Its scalability ensures growth potential, bridging the home-school gap effectively.',
+      'This solution eliminates navigation complexities, enabling employees to complete payroll tasks in seconds through AI-driven workflows. By automating request handling, approvals, and document access, enterprises reduce HR workload, improve employee productivity, and enhance governance. API-based authentication ensures secure, real-time access to payroll data, making it a scalable solution for global enterprises.',
+
+    keyFeatures: [
+      {
+        title: 'Conversational AI for Payroll',
+        description:
+          'Employees engage via natural language queries to retrieve payslips, track earnings, and resolve payroll concerns instantly.',
+      },
+      {
+        title: 'Automated Approvals & Workflows',
+        description:
+          'AI-driven widgets for salary approvals, leave adjustments, and tax declarations, reducing manual HR interventions.',
+      },
+      {
+        title: 'Enterprise-Grade Security',
+        description:
+          'API-based authentication ensures compliance with enterprise security policies, safeguarding payroll data.',
+      },
+      {
+        title: 'Seamless System Integration',
+        description:
+          'Works with SAP, Workday, Oracle, and other enterprise HRMS platforms for real-time payroll processing.',
+      },
+      {
+        title: 'Multi-Language & Customization',
+        description:
+          'Supports English, Arabic, and enterprise-specific policy configurations for a personalized experience.',
+      },
+    ],
     image: '/Frame 1.png',
     video: '',
     alt: 'whatapp',
