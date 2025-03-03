@@ -262,46 +262,50 @@ export const slideData = [
   },
   {
     projectName:
-      'AI Payroll ESS: Automating Payroll & Approvals with Conversational AI & Generative UI',
-    usecase: 'Empowering Enterprises with AI-driven Payroll Self-Service',
+    'AI-Powered WhatsApp Billing: Automating Invoicing, Approvals & Payment Reminders',
+    usecase:
+    'AI-Driven Billing & Workflow Automation via WhatsApp',
     usecasedesc:
-      'In large-scale enterprises, payroll operations are complex, time-sensitive, and resource-intensive. Our AI-powered Employee Self-Service (ESS) solution redefines payroll management by integrating Conversational AI (CAI) with Generative UI (GUI), eliminating manual intervention and streamlining approvals. With intelligent automation, employees and HR teams experience seamless, real-time payroll interactions, reducing inefficiencies while ensuring compliance and security at scale.',
-    probelmheading: 'Fragmented Payroll Processes & High Operational Overhead',
+    'Managing invoices, approvals, and payment follow-ups manually is inefficient and delays revenue collection. Our AI-powered WhatsApp Billing Solution automates invoice generation, approvals, and reminders—seamlessly integrating with business workflows to enhance financial efficiency.',
+    probelmheading:
+    'Inefficient Invoicing, Delayed Approvals & Missed Payments',
     problem:
-      'Enterprise payroll systems often struggle with disjointed interfaces, manual approvals, and high-volume employee queries. Employees face delays in accessing payslips, tracking deductions, and resolving payroll issues, while HR teams are burdened with repetitive inquiries and approval bottlenecks. This lack of automation impacts operational efficiency, employee satisfaction, and compliance readiness.',
-    solutionheading: 'AI-Powered Self-Service with Embedded Workflows',
+    'Traditional invoicing systems operate in silos, causing delays and revenue loss due to: Manual invoice creation & tracking, leading to inefficiencies. Approval bottlenecks, requiring constant follow-ups with decision-makers. Missed payment deadlines, as there are no automated reminders. Lack of real-time visibility, delaying financial reporting and reconciliation. For enterprises, these challenges result in cash flow disruptions and increased operational costs.',
+    solutionheading:
+    'AI-Powered WhatsApp Integration for End-to-End Billing',
     solution:
-      'Our Conversational AI-driven ESS integrates with enterprise payroll systems, enabling employees to retrieve payslips, process approvals, and execute payroll-related actions within a unified AI-powered interface. Generative UI dynamically renders interactive widgets, allowing users to approve salary revisions, manage tax documents, and submit reimbursement claims—all within a conversational flow. The AI acts as a proactive assistant, anticipating user needs, ensuring policy compliance, and delivering insights on salary structures, deductions, and benefits.',
-    summaryheading: 'Scalable, Intelligent & Secure Payroll Automation',
+    'Our WhatsApp-based AI Billing System streamlines financial workflows by allowing users to: ✅ Generate & share invoices instantly via AI-driven automation. ✅ Automate approval workflows, enabling instant invoice approvals in WhatsApp. ✅ Send AI-powered payment reminders, reducing collection delays. ✅ Track invoice status in real-time, improving financial visibility. ✅ Integrate seamlessly with ERP & accounting systems for smooth reconciliation. Built with Flask (WhatsApp API), FastAPI (AI processing), and Milvus (document storage), this system ensures secure, real-time invoicing and payments—without manual effort.',
+    summaryheading:
+    'AI-Powered Financial Automation for Enterprises',
     summary:
-      'This solution eliminates navigation complexities, enabling employees to complete payroll tasks in seconds through AI-driven workflows. By automating request handling, approvals, and document access, enterprises reduce HR workload, improve employee productivity, and enhance governance. API-based authentication ensures secure, real-time access to payroll data, making it a scalable solution for global enterprises.',
-
+    'By embedding Conversational AI into invoicing, businesses can eliminate manual tasks, automate reminders, and speed up approvals—leading to faster collections, reduced administrative workload, and improved cash flow management.',
+    
     keyFeatures: [
-      {
-        title: 'Conversational AI for Payroll',
-        description:
-          'Employees engage via natural language queries to retrieve payslips, track earnings, and resolve payroll concerns instantly.',
-      },
-      {
-        title: 'Automated Approvals & Workflows',
-        description:
-          'AI-driven widgets for salary approvals, leave adjustments, and tax declarations, reducing manual HR interventions.',
-      },
-      {
-        title: 'Enterprise-Grade Security',
-        description:
-          'API-based authentication ensures compliance with enterprise security policies, safeguarding payroll data.',
-      },
-      {
-        title: 'Seamless System Integration',
-        description:
-          'Works with SAP, Workday, Oracle, and other enterprise HRMS platforms for real-time payroll processing.',
-      },
-      {
-        title: 'Multi-Language & Customization',
-        description:
-          'Supports English, Arabic, and enterprise-specific policy configurations for a personalized experience.',
-      },
+    {
+    title: 'Conversational AI for Invoicing',
+    description:
+    'Create & modify invoices via WhatsApp.',
+    },
+    {
+    title: 'Automated Approvals',
+    description:
+    'Approve or reject invoices instantly.',
+    },
+    {
+    title: 'AI-Powered Payment Reminders',
+    description:
+    'Ensure timely collections.',
+    },
+    {
+    title: 'Real-Time Invoice Tracking',
+    description:
+    'Gain full financial visibility.',
+    },
+    {
+    title: 'Enterprise-Grade Security & Compliance',
+    description:
+    'Secure data handling & integration.',
+    },
     ],
     image: '/Frame 1.png',
     video: '',

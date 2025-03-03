@@ -97,7 +97,7 @@ const SwipeCarousel = () => {
                 onClick={() => setIsPopupOpen(true)}
                 className='w-[90%] sm:w-[85%] md:w-full h-full object-contain rounded-3xl bg-white mx-auto cursor-pointer'
               />
-              <button
+              {/* <button
                 onClick={() => setIsPopupOpen(true)}
                 className='absolute top-4 right-4 rounded-full p-2 text-gray-800 hover:bg-white transition-colors'
                 aria-label='Show slide details'
@@ -105,7 +105,7 @@ const SwipeCarousel = () => {
                 <span className='text-xl font-bold cursor-pointer hover:text-blue-500'>
                   <AiOutlineInfoCircle />
                 </span>
-              </button>
+              </button> */}
             </motion.div>
           </AnimatePresence>
 
