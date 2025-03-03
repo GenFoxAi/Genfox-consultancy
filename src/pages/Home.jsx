@@ -26,7 +26,7 @@ const Home = () => {
       <section id="scroll-section"><ScrollSection /></section>
       <section id="success-stories"><SwipeCarousel /></section>
       <section id="team"><TeamSection /></section>
-      <section id="faq"><FAQ /></section>
+      <section id="faq"><FAQ setIsModalOpen={setIsModalOpen} /></section>
       <section id="call-to-action">
         <CallToAction isOpen={isModalOpen} setIsOpen={setIsModalOpen} /> 
       </section>

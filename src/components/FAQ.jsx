@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { faqs } from '../utils/content';
 
-const FAQ = () => {
+const FAQ = ({ setIsModalOpen }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -50,9 +50,9 @@ const FAQ = () => {
           <p className='text-white/80 max-w-lg font-light text-base sm:text-lg'>
             Do you have more questions? We have prepared some answers for you.
             But if you need more, just
-            <span className='text-white underline cursor-pointer whitespace-nowrap'>
+            <span className='text-white underline cursor-pointer whitespace-nowrap' onClick={() => setIsModalOpen(true)}>
               {' '}
-              Book a call{' '}
+              Book Now{' '}
             </span>
             or mail us at{' '}
             <span className='text-white underline cursor-pointer'>

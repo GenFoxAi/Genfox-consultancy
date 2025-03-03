@@ -235,7 +235,7 @@ const CallToAction = ({ isOpen, setIsOpen }) => {
             Still not sure?
           </h2>
           <p className="text-base sm:text-lg md:text-lg text-gray-300 max-w-sm sm:max-w-md md:max-w-lg">
-            Contact us to learn more about Sanny AI Automation Agency and figure
+            Contact us to learn more about Genfox AI Automation Agency and figure
             out how your team can change the way they work with AI.
           </p>
         </div>
