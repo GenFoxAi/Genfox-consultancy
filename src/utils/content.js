@@ -164,6 +164,52 @@ export const services = [
 
 export const slideData = [
   {
+    projectName: 'GenFox AI: The Future of AI-Powered Personal Assistance',
+    usecase: 'AI-Powered Personal Assistance for Efficiency & Productivity',
+    usecasedesc:
+      'GenFox AI is an intelligent virtual assistant designed to simplify personal and professional life by integrating AI-powered automation within a single WhatsApp interface. From finance tracking to productivity management, GenFox enhances efficiency through conversational AI and smart integrations.',
+    probelmheading: 'Fragmented Tools & Inefficient Task Management',
+    problem:
+      'In a fast-paced world, individuals and professionals struggle with managing their daily tasks, finances, and health efficiently. Traditional productivity apps require constant switching, manual inputs, and lack seamless integration, making it difficult to stay organized and proactive.',
+    solutionheading: 'A Unified AI-Powered Assistant',
+    solution:
+      'GenFox AI eliminates app-switching by acting as a centralized AI assistant that integrates with existing tools like calendars, finance trackers, and fitness apps. Through a Generative UI (GUI) on WhatsApp, users can interact via conversational AI to schedule meetings, track expenses, receive personalized recommendations, and automate tasks—enhancing productivity effortlessly.',
+    summaryheading: 'AI That Adapts to You',
+    summary:
+      'GenFox AI redefines digital assistance by combining natural language processing, predictive automation, and seamless integrations into a single AI-driven experience. Whether it’s budgeting, fitness tracking, career growth, or daily task management, GenFox adapts to each users unique needs, making AI more accessible and intuitive for individuals and professionals alike.',
+    keyFeatures: [
+      {
+        title: 'Conversational AI Interface',
+        description:
+          'A WhatsApp-based AI assistant for intuitive, real-time interactions.',
+      },
+      {
+        title: 'Multi-Functionality',
+        description:
+          'AI-driven financial tracking, health monitoring, productivity management, and learning recommendations.',
+      },
+      {
+        title: 'Seamless Integrations',
+        description:
+          'Connects with tools like Google Calendar, Apple Health, Gmail, Notion, and more.',
+      },
+      {
+        title: 'Smart Automation',
+        description:
+          'AI-powered reminders, scheduling, and proactive suggestions to optimize time management.',
+      },
+      {
+        title: 'Privacy & Security',
+        description:
+          'User data remains private, ensuring a secure and personalized experience.',
+      },
+    ],
+    image: '/test1.png',
+    video:
+      'https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/view?usp=sharing',
+    alt: 'donna',
+  },
+  {
     projectName:
       'AI Payroll ESS: Automating Payroll & Approvals with Conversational AI & Generative UI',
     usecase: 'Empowering Enterprises with AI-driven Payroll Self-Service',
@@ -174,11 +220,10 @@ export const slideData = [
       'Enterprise payroll systems often struggle with disjointed interfaces, manual approvals, and high-volume employee queries. Employees face delays in accessing payslips, tracking deductions, and resolving payroll issues, while HR teams are burdened with repetitive inquiries and approval bottlenecks. This lack of automation impacts operational efficiency, employee satisfaction, and compliance readiness.',
     solutionheading: 'AI-Powered Self-Service with Embedded Workflows',
     solution:
-      'GenFox AI eliminates app-switching by acting as a centralized AI assistant that integrates with existing tools like calendars, finance trackers, and fitness apps. Through a conversational AI interface on WhatsApp, users can interact naturally to schedule meetings, track expenses, receive personalized recommendations, and automate tasks—enhancing productivity effortlessly.',
+      'GenFox AI eliminates app-switching by acting as a centralized AI assistant that integrates with existing tools like calendars, finance trackers, and fitness apps. Through a conversational AI interface on WhatsApp, users can interact naturally to schedule meetings, track expenses, receive personalized recommendations, and automate tasks—enhancing productivity effortlessly.',
     summaryheading: 'Scalable, Intelligent & Secure Payroll Automation',
     summary:
       'This solution eliminates navigation complexities, enabling employees to complete payroll tasks in seconds through AI-driven workflows. By automating request handling, approvals, and document access, enterprises reduce HR workload, improve employee productivity, and enhance governance. API-based authentication ensures secure, real-time access to payroll data, making it a scalable solution for global enterprises.',
-
     keyFeatures: [
       {
         title: 'Conversational AI for Payroll',
@@ -206,106 +251,47 @@ export const slideData = [
           'Supports English, Arabic, and enterprise-specific policy configurations for a personalized experience.',
       },
     ],
-
-    image: '/test1.png',
-    video:
-      'https://drive.google.com/file/d/1FHkLN5Td6nggP_223EQrowSuDyTVt-Jo/view?usp=sharing',
-    alt: 'donna',
-  },
-  {
-    projectName:
-      'GenFox AI: The Future of AI-Powered Personal Assistance',
-    usecase: 'AI-Powered Personal Assistance for Efficiency & Productivity',
-    usecasedesc:
-      'GenFox AI is an intelligent virtual assistant designed to simplify personal and professional life by integrating AI-powered automation within a single WhatsApp interface. From finance tracking to productivity management, GenFox enhances efficiency through conversational AI and smart integrations.',
-    probelmheading: 'Fragmented Tools & Inefficient Task Management',
-    problem:
-      'In a fast-paced world, individuals and professionals struggle with managing their daily tasks, finances, and health efficiently. Traditional productivity apps require constant switching, manual inputs, and lack seamless integration, making it difficult to stay organized and proactive.',
-    solutionheading: 'A Unified AI-Powered Assistan',
-    solution:
-      'GenFox AI eliminates app-switching by acting as a centralized AI assistant that integrates with existing tools like calendars, finance trackers, and fitness apps. Through a Generative UI (GUI) on WhatsApp, users can interact via conversational AI to schedule meetings, track expenses, receive personalized recommendations, and automate tasks—enhancing productivity effortlessly.',
-      summaryheading:'AI That Adapts to You',
-    summary:
-      'GenFox AI redefines digital assistance by combining natural language processing, predictive automation, and seamless integrations into a single AI-driven experience. Whether it’s budgeting, fitness tracking, career growth, or daily task management, GenFox adapts to each users unique needs, making AI more accessible and intuitive for individuals and professionals alike.',
-
-      keyFeatures: [
-        {
-          title: 'Conversational AI Interface',
-          description:
-            'A WhatsApp-based AI assistant for intuitive, real-time interactions.',
-        },
-        {
-          title: 'Multi-Functionality',
-          description:
-            'AI-driven financial tracking, health monitoring, productivity management, and learning recommendations.',
-        },
-        {
-          title: 'Seamless Integrations',
-          description:
-            'Connects with tools like Google Calendar, Apple Health, Gmail, Notion, and more.',
-        },
-        {
-          title: 'Smart Automation',
-          description:
-            'AI-powered reminders, scheduling, and proactive suggestions to optimize time management.',
-        },
-        {
-          title: 'Privacy & Security',
-          description:
-            'User data remains private, ensuring a secure and personalized experience.',
-        },
-      ],
-      
     image: '/Usecase 2.jpg',
     video: '',
     alt: 'commit',
   },
   {
     projectName:
-    'AI-Powered WhatsApp Billing: Automating Invoicing, Approvals & Payment Reminders',
-    usecase:
-    'AI-Driven Billing & Workflow Automation via WhatsApp',
+      'AI-Powered WhatsApp Billing: Automating Invoicing, Approvals & Payment Reminders',
+    usecase: 'AI-Driven Billing & Workflow Automation via WhatsApp',
     usecasedesc:
-    'Managing invoices, approvals, and payment follow-ups manually is inefficient and delays revenue collection. Our AI-powered WhatsApp Billing Solution automates invoice generation, approvals, and reminders—seamlessly integrating with business workflows to enhance financial efficiency.',
+      'Managing invoices, approvals, and payment follow-ups manually is inefficient and delays revenue collection. Our AI-powered WhatsApp Billing Solution automates invoice generation, approvals, and reminders—seamlessly integrating with business workflows to enhance financial efficiency.',
     probelmheading:
-    'Inefficient Invoicing, Delayed Approvals & Missed Payments',
+      'Inefficient Invoicing, Delayed Approvals & Missed Payments',
     problem:
-    'Traditional invoicing systems operate in silos, causing delays and revenue loss due to: Manual invoice creation & tracking, leading to inefficiencies. Approval bottlenecks, requiring constant follow-ups with decision-makers. Missed payment deadlines, as there are no automated reminders. Lack of real-time visibility, delaying financial reporting and reconciliation. For enterprises, these challenges result in cash flow disruptions and increased operational costs.',
-    solutionheading:
-    'AI-Powered WhatsApp Integration for End-to-End Billing',
+      'Traditional invoicing systems operate in silos, causing delays and revenue loss due to: Manual invoice creation & tracking, leading to inefficiencies. Approval bottlenecks, requiring constant follow-ups with decision-makers. Missed payment deadlines, as there are no automated reminders. Lack of real-time visibility, delaying financial reporting and reconciliation. For enterprises, these challenges result in cash flow disruptions and increased operational costs.',
+    solutionheading: 'AI-Powered WhatsApp Integration for End-to-End Billing',
     solution:
-    'Our WhatsApp-based AI Billing System streamlines financial workflows by allowing users to: ✅ Generate & share invoices instantly via AI-driven automation. ✅ Automate approval workflows, enabling instant invoice approvals in WhatsApp. ✅ Send AI-powered payment reminders, reducing collection delays. ✅ Track invoice status in real-time, improving financial visibility. ✅ Integrate seamlessly with ERP & accounting systems for smooth reconciliation. Built with Flask (WhatsApp API), FastAPI (AI processing), and Milvus (document storage), this system ensures secure, real-time invoicing and payments—without manual effort.',
-    summaryheading:
-    'AI-Powered Financial Automation for Enterprises',
+      'Our WhatsApp-based AI Billing System streamlines financial workflows by allowing users to: ✅ Generate & share invoices instantly via AI-driven automation. ✅ Automate approval workflows, enabling instant invoice approvals in WhatsApp. ✅ Send AI-powered payment reminders, reducing collection delays. ✅ Track invoice status in real-time, improving financial visibility. ✅ Integrate seamlessly with ERP & accounting systems for smooth reconciliation. Built with Flask (WhatsApp API), FastAPI (AI processing), and Milvus (document storage), this system ensures secure, real-time invoicing and payments—without manual effort.',
+    summaryheading: 'AI-Powered Financial Automation for Enterprises',
     summary:
-    'By embedding Conversational AI into invoicing, businesses can eliminate manual tasks, automate reminders, and speed up approvals—leading to faster collections, reduced administrative workload, and improved cash flow management.',
-    
+      'By embedding Conversational AI into invoicing, businesses can eliminate manual tasks, automate reminders, and speed up approvals—leading to faster collections, reduced administrative workload, and improved cash flow management.',
     keyFeatures: [
-    {
-    title: 'Conversational AI for Invoicing',
-    description:
-    'Create & modify invoices via WhatsApp.',
-    },
-    {
-    title: 'Automated Approvals',
-    description:
-    'Approve or reject invoices instantly.',
-    },
-    {
-    title: 'AI-Powered Payment Reminders',
-    description:
-    'Ensure timely collections.',
-    },
-    {
-    title: 'Real-Time Invoice Tracking',
-    description:
-    'Gain full financial visibility.',
-    },
-    {
-    title: 'Enterprise-Grade Security & Compliance',
-    description:
-    'Secure data handling & integration.',
-    },
+      {
+        title: 'Conversational AI for Invoicing',
+        description: 'Create & modify invoices via WhatsApp.',
+      },
+      {
+        title: 'Automated Approvals',
+        description: 'Approve or reject invoices instantly.',
+      },
+      {
+        title: 'AI-Powered Payment Reminders',
+        description: 'Ensure timely collections.',
+      },
+      {
+        title: 'Real-Time Invoice Tracking',
+        description: 'Gain full financial visibility.',
+      },
+      {
+        title: 'Enterprise-Grade Security & Compliance',
+        description: 'Secure data handling & integration.',
+      },
     ],
     image: '/Frame 1.png',
     video: '',

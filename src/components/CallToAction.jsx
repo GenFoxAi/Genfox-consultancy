@@ -32,10 +32,10 @@ const CallToAction = ({ isOpen, setIsOpen }) => {
         setStatus('Invalid email address');
         return;
       }
-      if (!formData.services) {
-        setStatus('Please select services');
-        return;
-      }
+      // if (!formData.services) {
+      //   setStatus('Please select services');
+      //   return;
+      // }
       if (!formData.description) {
         setStatus('Please provide a description');
         return;
@@ -140,7 +140,7 @@ const CallToAction = ({ isOpen, setIsOpen }) => {
                       />
                     </div>
                   </div>
-
+{/* 
                   <div className="mb-4">
                     <label
                       htmlFor="services"
@@ -168,7 +168,7 @@ const CallToAction = ({ isOpen, setIsOpen }) => {
                       </option>
                       <option value="AI-Powered Automation">AI-Powered Automation</option>
                     </select>
-                  </div>
+                  </div> */}
 
                   <div className="mb-4">
                     <label
