@@ -65,20 +65,34 @@ export const teamMembers = [
     // title: 'CEO',
     image: '/UserProfilepitcure.jpg',
   },
-  // {
-  //   id: 2,
-  //   name: 'Beth Johanssen',
-  //   title: 'CTO',
-  //   image:
-  //     'https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2VvfGVufDB8fDB8fHwy',
-  // },
-  // {
-  //   id: 3,
-  //   name: 'Chris Beck',
-  //   title: 'Head of Data Engineering',
-  //   image:
-  //     'https://images.unsplash.com/photo-1562788869-4ed32648eb72?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGNlb3xlbnwwfHwwfHx8Mg%3D%3D',
-  // },
+  {
+    id: 2,
+    name: 'Khizer Hussain',
+    // title: 'CTO',
+    image:
+      'https://cdnb.artstation.com/p/assets/images/images/084/124/305/large/matthew-blank-profile-photo-2-1.jpg?1737590059',
+  },
+  {
+    id: 3,
+    name: 'Naveen Jones',
+    // title: 'Head of Data Engineering',
+    image:
+      'https://cdnb.artstation.com/p/assets/images/images/084/124/305/large/matthew-blank-profile-photo-2-1.jpg?1737590059',
+  },
+  {
+    id: 4,
+    name: 'Vyshnav K',
+    // title: 'Head of Data Engineering',
+    image:
+      'https://cdnb.artstation.com/p/assets/images/images/084/124/305/large/matthew-blank-profile-photo-2-1.jpg?1737590059',
+  },
+  {
+    id: 5,
+    name: 'Krishna',
+    // title: 'Head of Data Engineering',
+    image:
+      'https://cdnb.artstation.com/p/assets/images/images/084/124/305/large/matthew-blank-profile-photo-2-1.jpg?1737590059',
+  },
 ];
 
 export const svgs = [
