@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div className="">
       <Navbar setIsModalOpen={setIsModalOpen} /> 
-      <section id="hero"><Hero /></section>
+      <section id="hero"><Hero setIsModalOpen={setIsModalOpen} /></section>
       <section id="toad"><Toad /></section>
       <section id="how-it-works"><HowItWorks /></section>
       <section id="features"><Features /></section>
