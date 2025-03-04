@@ -70,29 +70,29 @@ export const teamMembers = [
     name: 'Khizer Hussain',
     // title: 'CTO',
     image:
-      '/pfp2.png',
+      '/khiz.png',
   },
-  // {
-  //   id: 3,
-  //   name: 'Naveen Jones',
-  //   // title: 'Head of Data Engineering',
-  //   image:
-  //     'https://cdnb.artstation.com/p/assets/images/images/084/124/305/large/matthew-blank-profile-photo-2-1.jpg?1737590059',
-  // },
-  // {
-  //   id: 4,
-  //   name: 'Vyshnav K',
-  //   // title: 'Head of Data Engineering',
-  //   image:
-  //     'https://cdnb.artstation.com/p/assets/images/images/084/124/305/large/matthew-blank-profile-photo-2-1.jpg?1737590059',
-  // },
-  // {
-  //   id: 5,
-  //   name: 'Krishna Saxena',
-  //   // title: 'Head of Data  Engineering',
-  //   image:
-  //     'https://cdnb.artstation.com/p/assets/images/images/084/124/305/large/matthew-blank-profile-photo-2-1.jpg?1737590059',
-  // },
+  {
+    id: 3,
+    name: 'Naveen Jones',
+    // title: 'Head of Data Engineering',
+    image:
+      '/nave.png',
+  },
+  {
+    id: 4,
+    name: 'Krishna Saxena',
+    // title: 'Head of Data Engineering',
+    image:
+      '/kris.png',
+  },
+  {
+    id: 5,
+    name: 'Vyshnav',
+    // title: 'Head of Data  Engineering',
+    image:
+      'vys.jpg',
+  },
 ];
 
 export const svgs = [
