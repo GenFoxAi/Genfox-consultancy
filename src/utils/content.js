@@ -63,7 +63,7 @@ export const teamMembers = [
     id: 1,
     name: 'Shahnawaz Khan',
     // title: 'CEO',
-    image: '/UserProfilepitcure.jpg',
+    image: '/shaz.png',
   },
   {
     id: 2,
