@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -10,12 +11,15 @@ const Footer = () => {
             © 2025 Genfox AI Optimization Agency.
           </div>
           <div className='flex space-x-4 text-sm'>
-            <a href='#' className='hover:text-white'>
-            </a>
+            <a href='#' className='hover:text-white'></a>
+            <Link to='/privacy-policy' className='hover:text-white'>Privacy Policy</Link>
             <span className='mx-1'>|</span>
-            <a href='https://www.linkedin.com/company/genfox-ai/' target="_blank" className='hover:text-white'>
+            <a
+              href='https://www.linkedin.com/company/genfox-ai/'
+              target='_blank'
+              className='hover:text-white'
+            >
               LinkedIn
-              
             </a>
           </div>
         </div>

@@ -7,6 +7,7 @@ import {
 import RootLayout from './layout/RootLayout';
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
+import Privacy from './pages/Privacy';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
       <Route path='/' element={<RootLayout />}>
         <Route index element={<Home />} />
       </Route>
+      <Route path='/privacy-policy' element={<Privacy />} />
       <Route path='*' element={<ErrorPage />} />
     </>
   )
