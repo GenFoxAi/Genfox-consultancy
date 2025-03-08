@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import { useEffect } from 'react';
 
 const Privacy = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []);
   return (
     <div className='min-h-screen bg-black px-4 py-8 sm:px-6 lg:px-8'>
       {/* Fixed Header */}
