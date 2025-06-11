@@ -59,12 +59,12 @@ export const faqs = [
 ];
 
 export const teamMembers = [
-  {
-    id: 1,
-    name: 'Shahnawaz Khan',
-    // title: 'CEO',
-    image: '/shaz.png',
-  },
+  // {
+  //   id: 1,
+  //   name: 'Shahnawaz Khan',
+  //   // title: 'CEO',
+  //   image: '/shaz.png',
+  // },
   {
     id: 2,
     name: 'Khizer Hussain',
